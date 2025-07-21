@@ -16,13 +16,66 @@ jobs:
         key: ${{ secrets.TF_SECRET }}
         port: ${{ secrets.TF_PORT }}
         script: |
-          cd websites/www/info_grid
+          set -e  # Exit on any error
+          
+          # Define variables
+          REPO_URL="https://github.com/threefoldtech/info_grid.git"  # Update with actual repo URL
+          PROJECT_DIR="websites/www/info_grid"
+          BACKUP_DIR="websites/www/info_grid.backup.$(date +%Y%m%d%H%M%S)"
+          
+          echo "=== Starting deployment process ==="
+          
+          # Create websites/www directory if it doesn't exist
+          mkdir -p websites/www
+          cd websites/www
+          
+          # Handle existing directory
+          if [ -d "info_grid" ]; then
+            echo "Found existing info_grid directory"
+            
+            # Check if it's a git repository
+            if [ -d "info_grid/.git" ]; then
+              echo "Existing directory is a git repository, updating..."
+              cd info_grid
+              
+              # Verify we're on the correct remote
+              CURRENT_REMOTE=$(git remote get-url origin 2>/dev/null || echo "")
+              if [ "$CURRENT_REMOTE" != "$REPO_URL" ]; then
+                echo "Warning: Remote URL mismatch. Expected: $REPO_URL, Found: $CURRENT_REMOTE"
+                echo "Backing up and re-cloning..."
+                cd ..
+                mv info_grid "$BACKUP_DIR"
+                git clone "$REPO_URL" info_grid
+                cd info_grid
+              fi
+            else
+              echo "Existing directory is not a git repository, backing up and re-cloning..."
+              mv info_grid "$BACKUP_DIR"
+              git clone "$REPO_URL" info_grid
+              cd info_grid
+            fi
+          else
+            echo "Cloning repository for the first time..."
+            git clone "$REPO_URL" info_grid
+            cd info_grid
+          fi
+          
+          # Ensure we're in the project directory
+          if [ ! -d ".git" ]; then
+            echo "Error: Not in a git repository after setup"
+            exit 1
+          fi
+          
+          echo "=== Updating repository ==="
           git checkout master
-          git log -1
-          git fetch
+          git log -1 --oneline
+          git fetch origin
           git reset --hard origin/master
+          
+          echo "=== Setting up Node.js environment ==="
           # Install or update Node.js to v20 (required for glob 11.0.1)
           echo "Setting up Node.js v20 for Docusaurus and glob..."
+          
           # Find nvm and use it if available
           if [ -d "$HOME/.nvm" ]; then
             export NVM_DIR="$HOME/.nvm"
@@ -32,28 +85,122 @@ jobs:
             # Use Node.js 20
             nvm use 20
           else
-            # Alternative: Install Node.js directly
-            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-            sudo apt-get install -y nodejs
+            # Alternative: Install Node.js using NodeSource without sudo
+            echo "NVM not found, installing Node.js directly..."
+            
+            # Check if we already have Node.js 20
+            if command -v node >/dev/null 2>&1; then
+              CURRENT_NODE_VERSION=$(node -v | sed 's/v//' | cut -d. -f1)
+              if [ "$CURRENT_NODE_VERSION" -ge 20 ]; then
+                echo "Node.js $CURRENT_NODE_VERSION already installed, skipping installation"
+              else
+                echo "Node.js version too old ($CURRENT_NODE_VERSION), need to install v20"
+              fi
+            fi
+            
+            # If Node.js 20+ is not available, try to install via package manager
+            # This assumes the user has appropriate permissions or Node.js is already available
+            if ! command -v node >/dev/null 2>&1 || [ "$CURRENT_NODE_VERSION" -lt 20 ]; then
+              echo "Attempting to install Node.js 20 via alternative methods..."
+              
+              # Try to install via snap if available (no sudo required for user)
+              if command -v snap >/dev/null 2>&1; then
+                echo "Trying snap installation..."
+                snap install node --classic --channel=20/stable || echo "Snap installation failed, continuing..."
+              fi
+              
+              # Try to download and install Node.js locally
+              if ! command -v node >/dev/null 2>&1 || [ "$(node -v | sed 's/v//' | cut -d. -f1)" -lt 20 ]; then
+                echo "Installing Node.js locally in user directory..."
+                cd $HOME
+                NODE_VERSION="20.19.4"
+                NODE_DISTRO="linux-x64"
+                
+                # Download and extract Node.js
+                if [ ! -d "node-v$NODE_VERSION-$NODE_DISTRO" ]; then
+                  wget -q "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-$NODE_DISTRO.tar.xz"
+                  tar -xf "node-v$NODE_VERSION-$NODE_DISTRO.tar.xz"
+                  rm "node-v$NODE_VERSION-$NODE_DISTRO.tar.xz"
+                fi
+                
+                # Add to PATH for this session
+                export PATH="$HOME/node-v$NODE_VERSION-$NODE_DISTRO/bin:$PATH"
+                
+                # Add to .bashrc for future sessions
+                if ! grep -q "node-v$NODE_VERSION-$NODE_DISTRO/bin" ~/.bashrc 2>/dev/null; then
+                  echo "export PATH=\"\$HOME/node-v$NODE_VERSION-$NODE_DISTRO/bin:\$PATH\"" >> ~/.bashrc
+                fi
+                
+                cd - # Return to previous directory
+              fi
+            fi
           fi
+          
           # Verify Node.js version
-          node -v
+          NODE_VERSION=$(node -v)
+          echo "Node.js version: $NODE_VERSION"
+          
           # Install Yarn if not available
           if ! which yarn > /dev/null; then
             echo "Yarn not found, installing..."
             npm install -g yarn
           fi
+          
+          YARN_VERSION=$(yarn -v)
+          echo "Yarn version: $YARN_VERSION"
+          
+          echo "=== Installing dependencies ==="
           # Create a temporary .yarnrc file to use resolutions for glob
           echo '{"resolutions": {"glob": "^8.1.0"}}' > .yarnrc.json
-          # Use the Makefile to build the site (now updated to use Yarn)
-          make build
           
+          # Install dependencies
+          yarn install --frozen-lockfile || yarn install
+          
+          echo "=== Building project ==="
+          # Check if Makefile exists and has build target
+          if [ -f "Makefile" ]; then
+            if grep -q "^build:" Makefile; then
+              echo "Using Makefile to build..."
+              make build
+            else
+              echo "Makefile exists but no 'build' target found. Available targets:"
+              make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}' | sort -u
+              echo "Attempting yarn build instead..."
+              yarn build
+            fi
+          elif [ -f "package.json" ]; then
+            echo "No Makefile found, using yarn build..."
+            yarn build
+          else
+            echo "Error: No Makefile or package.json found"
+            exit 1
+          fi
+          
+          echo "=== Verifying build output ==="
+          # Check if build directory was created
+          if [ ! -d "build" ]; then
+            echo "Error: Build directory was not created"
+            echo "Checking for alternative build directories..."
+            ls -la | grep -E "(dist|public|out|_site)" || true
+            exit 1
+          fi
+          
+          if [ ! "$(ls -A build)" ]; then
+            echo "Error: Build directory is empty"
+            exit 1
+          fi
+          
+          echo "Build successful. Contents of build directory:"
+          ls -la build/
+          
+          echo "=== Deploying to web server ==="
           # Move the build directory content to docs for web server
           echo "Moving build content to docs directory for web server..."
+          
           # Backup existing docs if it exists
           if [ -d "docs" ]; then
             echo "Backing up existing docs directory..."
-            mv docs docs.bak.$(date +%Y%m%d%H%M%S)
+            mv docs "docs.bak.$(date +%Y%m%d%H%M%S)"
           fi
           
           # Create docs directory and copy build content
@@ -61,12 +208,23 @@ jobs:
           cp -r build/* docs/
           echo "Content moved from build to docs directory successfully"
           
+          # Verify docs directory
+          if [ ! "$(ls -A docs)" ]; then
+            echo "Error: Docs directory is empty after copy"
+            exit 1
+          fi
+          
+          echo "Docs directory contents:"
+          ls -la docs/ | head -10
+          
           # Clean up the build directory to save space
           echo "Cleaning up build directory..."
           rm -rf build
           echo "Build directory removed"
           
+          echo "=== Deployment completed successfully ==="
           echo "Build completed. Web server should serve from the docs directory."
+          echo "Deployment timestamp: $(date)"
 
   wait:
     needs: deploy
@@ -76,7 +234,7 @@ jobs:
     - name: Wait Period
       id: wait-deploy
       run: |
-        echo "Sleeping for 30"
+        echo "Sleeping for 30 seconds to allow website update..."
         sleep 30
         
   checklinks:
