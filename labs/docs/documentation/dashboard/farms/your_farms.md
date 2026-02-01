@@ -11,27 +11,7 @@ This comprehensive guide aims to provide users with detailed instructions and in
 
 After logging in to the TF Dashboard, on the sidebar click on **Dashboard** then _Your Farms_ .
 
-## Create a New Farm
-
-If you want to start farming, you need a farmID, the ID of the farm that is owning the hardware node(s) you connect to the TFGrid.
-
-**Currently on**:
-
-- [Devnet](https://dashboard.dev.grid.tf/)
-- [Qanet](https://dashboard.qa.grid.tf/)
-- [Testnet](https://dashboard.test.grid.tf/)
-- [Mainnet](https://dashboard.grid.tf/)
-
-Click `Create Farm` and choose a name.
-
-![](./img/dashboard_farms.png)
-
-![](./img/dashboard_farms_create.png)
-
-Click on `Create`.
-
-The farm is by default set up as 'DIY'. A farm can become certified through certification program.
-Also a pricing policy is defined. Pricing policy is currently the same for all farms, the field is created for future use.
+> **Note:** Farm creation is done through the ThreeFold Connect app. For instructions, see [Create a Farm](../../tfconnect_toc/tfconnect_farming).
 
 ## Manage Your Farms
 
