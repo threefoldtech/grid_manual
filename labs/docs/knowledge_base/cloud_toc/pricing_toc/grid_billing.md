@@ -31,6 +31,67 @@ TFT price can be retrieved directly through [Stellar](https://stellar.expert/exp
 
 ![](./img/grid_billing_1.png)
 
+### TFT Billing Price on TFChain
+
+The TFT price used for on-chain billing is **not** the raw market price. Instead, TFChain applies a **billing price**: the market-derived average price clamped within council-defined minimum and maximum bounds. This prevents extreme market volatility from causing unpredictable costs for users or unfair compensation for farmers.
+
+#### Market Price vs Billing Price
+
+TFT has two distinct prices, each used for a different purpose:
+
+- **Market price**: The real trading value of TFT on exchanges. Used for buying, selling, swapping, and displaying TFT value in fiat.
+- **Billing price**: The value of TFT used internally by TFChain to calculate resource costs and contract billing. Derived from the market price but clamped to council-defined bounds.
+
+#### Why This Matters
+
+The clamping mechanism protects both users and farmers from extreme market swings. Consider a workload that costs 100 mUSD/hour:
+
+**When market price is below the floor** (protects users):
+
+- Market price = 5 mUSD per TFT, but the floor is 10 mUSD
+- Billing price becomes 10 mUSD per TFT
+- On-chain cost: `100 / 10 = 10 TFT/hour` instead of `100 / 5 = 20 TFT/hour`
+- The user pays **fewer TFT** than the market price would suggest
+
+**When market price is above the ceiling** (protects farmers):
+
+- Market price = 1500 mUSD per TFT, but the ceiling is 1000 mUSD
+- Billing price becomes 1000 mUSD per TFT
+- On-chain cost: `100 / 1000 = 0.1 TFT/hour` instead of `100 / 1500 = 0.067 TFT/hour`
+- The farmer receives **more TFT** than the market price would suggest
+
+Grid tooling (e.g. the grid client and calculator) has been updated to use the billing price for cost estimations, matching the actual on-chain billing logic.
+
+#### How It Works
+
+Three values stored on TFChain govern this mechanism. All values are expressed in **mUSD (millionths of USD)**:
+
+| Parameter | Description | Current Value |
+| --- | --- | --- |
+| `MinTftPrice` | Floor billing price | 10 mUSD (0.01 USD) |
+| `MaxTftPrice` | Ceiling billing price | 1000 mUSD (1.00 USD) |
+| `AverageTftPrice` | Market-derived average price | Varies |
+
+The billing price is calculated by clamping the average market price to the configured bounds:
+
+```
+BillingPrice = max(MinTftPrice, min(AverageTftPrice, MaxTftPrice))
+```
+
+- If the market price drops below `MinTftPrice`, the billing price uses the **minimum** (floor).
+- If the market price rises above `MaxTftPrice`, the billing price uses the **maximum** (ceiling).
+- Otherwise, the actual average market price is used as-is.
+
+#### Querying the Current Values
+
+These values can be queried from TFChain using the [Polkadot UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftfchain.grid.tf#/chainstate):
+
+1. Go to the **Chain State** page
+2. Select `tftPriceModule` as the **selected state query**
+3. Query `minTftPrice`, `maxTftPrice`, and `averageTftPrice` to see the current on-chain values
+
+> **Note:** The min and max bounds are set by the TFChain council and can be updated through governance. Always query the current values rather than relying on the defaults listed above.
+
 ### Current Cloud Units Values
 
 The current cloud units values can be retrieved directly from TChain with the [Polkadot UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftfchain.grid.tf#/chainstate) and the current chain state.
