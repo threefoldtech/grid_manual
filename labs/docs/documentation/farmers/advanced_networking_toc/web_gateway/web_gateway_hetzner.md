@@ -48,7 +48,7 @@ ssh root@<your-server-ip>
 
 1. Clone the ThreeFold IPXE fork:
 ```bash
-git clone https://github.com/threefold/ipxe.git
+git clone https://github.com/threefoldtech/ipxe.git
 ```
 
 2. Install required package:
