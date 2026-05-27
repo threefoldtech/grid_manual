@@ -1,10 +1,10 @@
-# Info Grid
+# Grid Manual
 
 A Docusaurus-based documentation site containing user guides, technical references, and FAQ content for grid infrastructure.
 
 ## What this is
 
-Info Grid is the primary documentation platform for the decentralized infrastructure stack. It provides comprehensive instructions for operators, developers, and end users interacting with the grid, including farming guides, deployment tutorials, API references, and troubleshooting documentation.
+Grid Manual is the primary documentation platform for the decentralized infrastructure stack. It provides comprehensive instructions for operators, developers, and end users interacting with the grid, including farming guides, deployment tutorials, API references, and troubleshooting documentation.
 
 The site is built as a static site using Docusaurus and is designed to be the single source of truth for all grid-related documentation.
 
@@ -18,7 +18,7 @@ The site is built as a static site using Docusaurus and is designed to be the si
 
 ## Role in the stack
 
-Info Grid sits alongside the operational stack as the user-facing documentation layer. It explains how to use the grid infrastructure, from initial node setup to advanced workload deployment. The documentation is versioned and covers multiple network environments.
+Grid Manual sits alongside the operational stack as the user-facing documentation layer. It explains how to use the grid infrastructure, from initial node setup to advanced workload deployment. The documentation is versioned and covers multiple network environments.
 
 ## Relation to ThreeFold
 
