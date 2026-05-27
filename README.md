@@ -76,3 +76,8 @@ If you want to contribute to [Manual.grid.tf](https://manual.grid.tf/), you shou
 1. Add the md file to the appropriate directory in the Docusaurus project structure.
 2. Update the sidebar configuration if needed.
 3. Use `yarn start` to preview your changes locally.
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Copyright (c) TFTech NV.
