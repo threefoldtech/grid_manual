@@ -10,7 +10,7 @@ We will now learn how to create a Zero-OS bootstrap image in order to boot a DIY
 
 ## Download the Zero-OS Bootstrap Image
 
-Let's download the Zero-OS bootstrap image via the Zero-OS Boot Generator for Grid V4: [https://v4.bootstrap.grid.tf](https://v4.bootstrap.grid.tf)
+Let's download the Zero-OS bootstrap image via the Zero-OS Boot Generator for Grid V3: [https://v3.bootstrap.grid.tf/](https://v3.bootstrap.grid.tf/)
 
 ![](./img/zos_boot_v4_1.png) 
 
