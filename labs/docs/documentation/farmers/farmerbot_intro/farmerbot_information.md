@@ -383,9 +383,9 @@ If the Farmerbot is running and you want to add a new 3Node to your farm, you ca
 
 There are only a few steps needed to update the Farmerbot to a new release.
 
-- Download the latest [ThreeFold tfgrid-sdk-go release](https://github.com/threefoldtech/tfgrid-sdk-go/releases) and extract the farmerbot for your specific setup (here we use `x86_64`). On the line `wget ...`, make sure to replace `<latest_release>` with the latest Farmerbot release.
+- Download the latest [ThreeFold tfgrid-sdk-go release](https://github.com/threefoldtech/zos_sdk_go/releases) and extract the farmerbot for your specific setup (here we use `x86_64`). On the line `wget ...`, make sure to replace `<latest_release>` with the latest Farmerbot release.
     ```
-    wget https://github.com/threefoldtech/tfgrid-sdk-go/releases/download/<latest_release>/tfgrid-sdk-go_Linux_x86_64.tar.gz
+    wget https://github.com/threefoldtech/zos_sdk_go/releases/download/<latest_release>/tfgrid-sdk-go_Linux_x86_64.tar.gz
     tar xf tfgrid-sdk-go_Linux_x86_64.tar.gz farmerbot
     ```
 - Make a copy of the old version in case you need it in the future:

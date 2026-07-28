@@ -9,7 +9,7 @@ sidebar_position: 73
 
 We present here the general steps required to install and use the ThreeFold Grid Client.
 
-The [Grid Client](https://github.com/threefoldtech/tfgrid-sdk-ts/tree/development/packages/grid_client) is written using [TypeScript](https://www.typescriptlang.org/) to provide more convenience and type-checked code. It is used to deploy workloads like virtual machines, kubernetes clusters, quantum storage, and more.
+The [Grid Client](https://github.com/threefoldtech/zos_sdk_ts/tree/development/packages/grid_client) is written using [TypeScript](https://www.typescriptlang.org/) to provide more convenience and type-checked code. It is used to deploy workloads like virtual machines, kubernetes clusters, quantum storage, and more.
 
 ## Mycelium Network
 
@@ -50,7 +50,7 @@ To use the Grid Client locally, clone the repository then install the Grid Clien
 
 - Clone the repository
   - ```bash
-    git clone https://github.com/threefoldtech/tfgrid-sdk-ts
+    git clone https://github.com/threefoldtech/zos_sdk_ts
     ```
 - Install the Grid Client
   - With yarn

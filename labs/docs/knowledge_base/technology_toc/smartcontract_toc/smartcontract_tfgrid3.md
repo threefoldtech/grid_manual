@@ -58,12 +58,12 @@ This pallet saves this data to storage and returns the user a `contract_id`.
 
 ## 2: The user sends the contractID and workload through the RMB to the destination Node.
 
-The Node reads from the [RMB](https://github.com/threefoldtech/rmb) and sees a deploy command, it reads the contractID and workload definition from the payload.
+The Node reads from the [RMB](https://github.com/threefoldtecharchive/rmb_archive) and sees a deploy command, it reads the contractID and workload definition from the payload.
 It decodes the workload and reads the contract from chain using the contract ID, the Node will check if the user that created the contract and the deployment hash on the contract is the same as what the Node receives over RMB. If all things check out, the Node deploys the workload.
 
 ## 3: The Node sends consumption reports to the chain
 
-The Node periodically sends consumption reports back to the chain for each deployed contract. The chain will compute how much is being used and will bill the user based on the farmers prices (the chain can read these prices by quering the farmers storage and reading the pricing data). See [PricingPolicy](https://github.com/threefoldtech/substrate-pallets/blob/03a5823ce79200709d525ec182036b47a60952ef/pallet-tfgrid/src/types.rs#L120).
+The Node periodically sends consumption reports back to the chain for each deployed contract. The chain will compute how much is being used and will bill the user based on the farmers prices (the chain can read these prices by quering the farmers storage and reading the pricing data). See [PricingPolicy](https://github.com/threefoldtecharchive/tfchain_pallets/blob/03a5823ce79200709d525ec182036b47a60952ef/pallet-tfgrid/src/types.rs#L120).
 
 A report looks like:
 

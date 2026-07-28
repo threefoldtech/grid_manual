@@ -74,7 +74,7 @@ Clone the repository, then install, build and run the Dashboard. Note that here 
 
 ```
 
-git clone https://github.com/threefoldtech/tfgrid-sdk-ts
+git clone https://github.com/threefoldtech/zos_sdk_ts
 
 cd tfgrid-sdk-ts/
 

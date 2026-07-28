@@ -24,7 +24,7 @@ The node information is the following:
 
 ![](./img/tf_dao_voting_weight_example.png)
 
-The Rust code that calculates node weight extracted from TFChain can be found [here](https://github.com/threefoldtech/tfchain/blob/eb36aa90df2d60cb1a534997903821fc68a096f1/substrate-node/support/src/resources.rs#L57-L91). 
+The Rust code that calculates node weight extracted from TFChain can be found [here](https://github.com/threefoldtech/ledger_chain/blob/eb36aa90df2d60cb1a534997903821fc68a096f1/substrate-node/support/src/resources.rs#L57-L91). 
 
 When we apply this code to the current node, we get the following:
 

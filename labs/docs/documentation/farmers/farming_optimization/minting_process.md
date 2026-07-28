@@ -14,7 +14,7 @@ The detailed minting process for V3 is as follow:
 - TFChain, ThreeFold's blockchain, has all the details about capacity provided by the nodes.
 - TFChain is used to track uptime.
 - Zero-OS reports to TFChain.
-- The code in [this repo](https://github.com/threefoldtech/minting_v3) uses the information from the blockchain to calculate the TFT to be minted.
+- The code in [this repo](https://github.com/threefoldtech/ledger_minting) uses the information from the blockchain to calculate the TFT to be minted.
 - A proof of what needs to be minted and why is created. This proof is then sent to our guardians.
 - The guardians need to double check the execution and the minting report. This is like a human check on the automated process.
 - The guardians need to sign. Only when consensus is achieved the minting as suggested will happen. This allows human to check the code.

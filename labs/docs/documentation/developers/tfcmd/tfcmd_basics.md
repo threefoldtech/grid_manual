@@ -19,7 +19,7 @@ Note that you can use the [Mycelium network](../../system_administrators/myceliu
 
 An easy way to use TFCMD is to download and extract the TFCMD binaries to your path. 
 
-- Download latest release from [releases](https://github.com/threefoldtech/tfgrid-sdk-go/releases)
+- Download latest release from [releases](https://github.com/threefoldtech/zos_sdk_go/releases)
   - ```
     wget <binaries_url>
     ```

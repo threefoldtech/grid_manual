@@ -83,12 +83,12 @@ Below are some of the key highlights of the TFGrid v3.10.0 component upgrades an
   - Node 16.17.1
   - NPM 8.10.0
   - Caddy
-- Learn more [here](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/gridify).
+- Learn more [here](https://github.com/threefoldtech/zos_sdk_go/tree/development/gridify).
 
 ### TFGrid-SDK-TS 2.0.0
 
 - Consolidated all components targeting web/TypeScript developers and frontend efforts into a single repository for easier management and rapid releases.
-- Moved gridclient, dashboard, statistics websites, and other TypeScript-based projects to the new repository [here](https://github.com/threefoldtech/tfgrid-sdk-ts).
+- Moved gridclient, dashboard, statistics websites, and other TypeScript-based projects to the new repository [here](https://github.com/threefoldtech/zos_sdk_ts).
 
 #### Grid-Client
 
@@ -108,7 +108,7 @@ Below are some of the key highlights of the TFGrid v3.10.0 component upgrades an
 #### TFGrid Weblets
 
 - We are phasing out the TFGrid Weblets for a newer playground rewritten in vue3, however, we introduced some maintenance bugfixes.
-- [Support umbrel on the grid](https://github.com/threefoldtech/home/issues/1394).
+- [Support umbrel on the grid](https://github.com/threefoldtech/grid_wiki/issues/1394).
 
 ### TF Playground v2.0.0
 

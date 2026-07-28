@@ -23,8 +23,8 @@ This release note includes updates, improvements and fixes of numerous grid comp
 ## Upgrades and Improvements
 
 ### TFChain v2.2.0
-- Added [Third Party Billing Services](https://github.com/threefoldtech/tfchain/blob/development/substrate-node/pallets/pallet-smart-contract/service_consumer_contract_flow.md), allowing defining contracts between TFChain users for a service and the billing.
-- Reworked billing flow, see  [details here](https://github.com/threefoldtech/tfchain/issues/269).
+- Added [Third Party Billing Services](https://github.com/threefoldtech/ledger_chain/blob/development/substrate-node/pallets/pallet-smart-contract/service_consumer_contract_flow.md), allowing defining contracts between TFChain users for a service and the billing.
+- Reworked billing flow, see  [details here](https://github.com/threefoldtech/ledger_chain/issues/269).
 - Infrastructure wise, we have integrated [Firesquid](https://docs.subsquid.io/), which is showing promising improvements in regards of the storage and data syncing.
 - Added Bugfixes around data validations and improving migrations
 
@@ -46,7 +46,7 @@ This release was mainly focused on the stabilization of ZOS, Monitoring Support,
 - Upgraded [Discourse](https://www.discourse.org/) solution deployment support
 - Various bugfixes and [UI Improvements](https://github.com/orgs/threefoldtech/projects/172/views/6)
 
-For more detailed information on this component release, please see [TF Weblets v1.6.0 Milestone](https://github.com/threefoldtech/grid_weblets/milestone/10)
+For more detailed information on this component release, please see [TF Weblets v1.6.0 Milestone](https://github.com/threefoldtecharchive/grid_weblets/milestone/10)
 
 ### TF Dashboard v1.3.0
 - Fixed broken 'Filter by Farm ID'
@@ -58,7 +58,7 @@ For more detailed information on this component release, please see [TF Weblets 
 - Support filtering nodes by farm name 
 - Added Monitoring dashboard 
 
-For more detailed information on this component release, please see [TF Dashboard v1.3.0 Milestone](https://github.com/threefoldtech/tfgrid_dashboard/milestone/12)
+For more detailed information on this component release, please see [TF Dashboard v1.3.0 Milestone](https://github.com/threefoldtecharchive/tfgrid_dashboard/milestone/12)
 
 ### TFGrid Client 1.5.0
 - Added ZLogs workload support
@@ -76,4 +76,4 @@ For more detailed information on this component release, please see [TF Dashboar
 - Added new queries for total resources
 - Added more parameters to /nodes enpoint for filter by twin_id and node_id
 
-For more detailed information on this component release, please see [TFGrid Proxy v1.6.5 Milestone](https://github.com/threefoldtech/tfgridclient_proxy/milestone/5)
+For more detailed information on this component release, please see [TFGrid Proxy v1.6.5 Milestone](https://github.com/threefoldtecharchive/tfgridclient_proxy/milestone/5)

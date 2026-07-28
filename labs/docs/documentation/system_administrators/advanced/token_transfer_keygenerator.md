@@ -19,7 +19,7 @@ Using this method, only transfer is possible between accounts that are generated
 - ed25519 keypair
 - Go installed on your local computer
 
-Create a keypair with the following tool: https://github.com/threefoldtech/tfchain_tft/tree/main/tfchain_bridge/tools/keygen
+Create a keypair with the following tool: https://github.com/threefoldtecharchive/tfchain_tft_bridge/tree/main/tfchain_bridge/tools/keygen
 
 ```sh
 go build .

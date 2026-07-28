@@ -110,4 +110,4 @@ func TestVMWithGPUDeployment(t *testing.T) {
 
 ## More Information
 
-For more information on this, you can check this [Client Pull Request](https://github.com/threefoldtech/tfgrid-sdk-go/pull/207/) on how to support the new calls to list GPUs and to deploy a machine with GPU.
+For more information on this, you can check this [Client Pull Request](https://github.com/threefoldtech/zos_sdk_go/pull/207/) on how to support the new calls to list GPUs and to deploy a machine with GPU.

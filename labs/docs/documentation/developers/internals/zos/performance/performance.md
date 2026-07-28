@@ -49,7 +49,7 @@ To ensure that the node always has a test result available, a check is performed
 
   - Return: all stored results
 
-The rmb direct client can be used to call these commands. check the [example](https://github.com/threefoldtech/tfgrid-sdk-go/blob/development/rmb-sdk-go/examples/rpc_client/main.go)
+The rmb direct client can be used to call these commands. check the [example](https://github.com/threefoldtech/zos_sdk_go/blob/development/rmb-sdk-go/examples/rpc_client/main.go)
 
 ## Caching
 

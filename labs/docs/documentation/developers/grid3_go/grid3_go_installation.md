@@ -35,7 +35,7 @@ Make sure that you have at least Go 1.19 installed on your machine.
     ```
 * Install the Grid3 Go Client
   * ```bash
-    go get github.com/threefoldtech/tfgrid-sdk-go/grid-client
+    go get github.com/threefoldtech/zos_sdk_go/grid-client
     ```
 
 This will make Grid3 Go Client packages available to you.

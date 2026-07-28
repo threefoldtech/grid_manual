@@ -162,5 +162,5 @@ That's it! You’ll want to ensure your clients are configured with boot priorit
 
 ### Multiple nodes can run with the same node ID
 
-This is a [known issue](https://github.com/threefoldtech/info_grid/issues/122) and will be resolved once the TPM effort gets finalized.
+This is a [known issue](https://github.com/threefoldtech/grid_manual/issues/122) and will be resolved once the TPM effort gets finalized.
 

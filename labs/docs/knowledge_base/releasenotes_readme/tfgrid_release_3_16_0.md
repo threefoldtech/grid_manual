@@ -51,8 +51,8 @@ No new release
 - Sentry support  
 - Solving `failed to decrypt rmb response`
 
-[https://github.com/threefoldtech/tfgrid-sdk-go/issues/1118](https://github.com/threefoldtech/tfgrid-sdk-go/issues/1118)  
-[https://github.com/threefoldtech/tfgrid-sdk-go/issues/1288](https://github.com/threefoldtech/tfgrid-sdk-go/issues/1288)
+[https://github.com/threefoldtech/zos_sdk_go/issues/1118](https://github.com/threefoldtech/zos_sdk_go/issues/1118)  
+[https://github.com/threefoldtech/zos_sdk_go/issues/1288](https://github.com/threefoldtech/zos_sdk_go/issues/1288)
 
 ## Grid-proxy (version: 0.16.6)
 

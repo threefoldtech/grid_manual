@@ -15,7 +15,7 @@ To provide a uniform deployment method, we use Docker for this guide. It is opti
 
 This guide is useful to get you started quickly with Pulumi on the TFGrid.
 
-Once you've successfully deployed a VM, you can try all the different Go examples within the [pulumi-threefold repository](https://github.com/threefoldtech/pulumi-threefold). The examples are available in the subdirectory `/examples/go/`.
+Once you've successfully deployed a VM, you can try all the different Go examples within the [pulumi-threefold repository](https://github.com/threefoldtech/grid_pulumi). The examples are available in the subdirectory `/examples/go/`.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ Once you've successfully deployed a VM, you can try all the different Go example
     export PATH=$PATH=:/root/.pulumi/bin
 
     # Clone the ThreeFold Pulumi repo
-    git clone https://github.com/threefoldtech/pulumi-threefold.git
+    git clone https://github.com/threefoldtech/grid_pulumi.git
     cd pulumi-threefold/examples/go/virtual_machine
 
     # Prepare the Pulumi Go environment

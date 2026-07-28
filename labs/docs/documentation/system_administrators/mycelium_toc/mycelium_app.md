@@ -15,7 +15,7 @@ You can download the Mycelium app with the following links:
   - Download the app from the App Store
 - [Android](https://play.google.com/store/apps/details?id=tech.threefold.mycelium)
   - Download the app from the Google Play Store
-- [Windows](https://github.com/threefoldtech/myceliumflut/releases)
+- [Windows](https://github.com/threefoldtech/mycelium_flutter/releases)
   - Go to the official Mycelium release page and download the latest `.exe` file (e.g. `mycelium-network-x86_64_v0.8.3.exe`)
 
 > Note: There is no app for Linux, but you can simply follow the installation guide [here](./installation).

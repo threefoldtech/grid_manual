@@ -32,14 +32,14 @@ This way, if some nodes on one network are being upgraded, deployments on the ot
 
 ### Minting V3 code
 
-Repo: https://github.com/threefoldtech/minting_v3
+Repo: https://github.com/threefoldtech/ledger_minting
 
 There was a change the way how the CU/SU are calculated from the resource units calculations, please see https://library.threefold.me/info/threefold#/resource_units_calc_cloudunits for details.
 Therefore, we updated the calculations on the minting code (minting v3), as well as adjusted price calculation for workloads on TFchain.
 
 ## GetTFT Shop v1.0.4
 
-Story: https://github.com/threefoldtech/home/issues/1171
+Story: https://github.com/threefoldtech/grid_wiki/issues/1171
 
 ### Minor UX / UI improvements
 
