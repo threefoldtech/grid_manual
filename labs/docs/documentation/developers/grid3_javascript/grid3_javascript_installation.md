@@ -115,4 +115,4 @@ You can explore the Grid Client by testing the different scripts proposed in **g
 
 ## Reference API
 
-While this is still a work in progress, you can have a look [here](https://threefoldtech.github.io/tfgrid-sdk-ts/packages/grid_client/docs/api/index).
+While this is still a work in progress, you can have a look [here](https://threefoldtech.github.io/zos_sdk_ts/packages/grid_client/docs/api/index).

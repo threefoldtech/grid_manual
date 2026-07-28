@@ -75,7 +75,7 @@ The minting receipts contain the following information:
 
 ## Alpha Minting Tool
 
-You can query additional minting information by using the [Dashboard Alpha Minting tool](https://dashboard.grid.tf/other/minting).
+You can query additional minting information by using the [TF Minting Reports tool on the Dashboard](https://dashboard.grid.tf/#/tf-chain/minting-reports/).
 
 - Download the minting receipts of your farm or of a single 3Node
 - Copy a minting receipt hash

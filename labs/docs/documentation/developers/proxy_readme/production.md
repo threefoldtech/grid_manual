@@ -93,7 +93,7 @@ docker run --name gridproxy -e POSTGRES_HOST="127.0.0.1" -e POSTGRES_PORT="5432"
 
 - Do `helm lint charts/gridproxy`
 - Regenerate the packages `helm package -u charts/gridproxy`
-- Regenerate index.yaml `helm repo index --url https://threefoldtech.github.io/tfgridclient_proxy/ .`
+- Regenerate index.yaml `helm repo index --url https://threefoldtecharchive.github.io/tfgridclient_proxy/ .`
 - Push your changes
 
 ## Install the chart using helm package
@@ -101,7 +101,7 @@ docker run --name gridproxy -e POSTGRES_HOST="127.0.0.1" -e POSTGRES_PORT="5432"
 - Adding the repo to your helm
 
   ```bash
-  helm repo add gridproxy https://threefoldtech.github.io/tfgridclient_proxy/
+  helm repo add gridproxy https://threefoldtecharchive.github.io/tfgridclient_proxy/
   ```
 
 - install a chart
