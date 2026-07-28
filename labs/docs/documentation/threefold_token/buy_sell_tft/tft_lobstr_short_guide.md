@@ -13,7 +13,7 @@ In this guide, we show how to buy and sell ThreeFold Tokens with [Lobstr wallet]
 
 Lobstr is an app for managing digital assets like TFT on the Stellar blockchain. In this case, we'll first obtain Stellar's native currency, Lumens (XLM) and swap them for TFT.
 
-> [Moonpay](https://www.moonpay.com/) is the service integrated in Lobstr to enable users to buy digital assets like XLM with fiat currencies like US Dollars and Euros. Moonpay is available in most regions, but there are some [exceptions](https://support.moonpay.com/hc/en-gb/articles/6557330712721-What-are-our-non-supported-countries-states-and-territories-for-on-ramp-product). If your country or state isn't supported by Moonpay, you will need to find another cryptocurrency exchange or on ramp to obtain XLM. From there, you can follow the rest of this guide.
+> [Moonpay](https://www.moonpay.com/) is the service integrated in Lobstr to enable users to buy digital assets like XLM with fiat currencies like US Dollars and Euros. Moonpay is available in most regions, but there are some [exceptions](https://support.moonpay.com/en/articles/380968-moonpay-s-unsupported-countries). If your country or state isn't supported by Moonpay, you will need to find another cryptocurrency exchange or on ramp to obtain XLM. From there, you can follow the rest of this guide.
 
 ## Install Lobstr
 
