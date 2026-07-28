@@ -90,7 +90,7 @@ rm version.info netboot.tar.gz
 
 rm pxelinux.cfg/default
 
-chmod 777 /srv/tftp/pxelinux.cfg (optional if next step fails)
+chmod 777 /srv/tftp/pxelinux.cfg   # optional, only needed if the next step fails
 
 echo 'default ipxe-prod.lkrn' >> pxelinux.cfg/default
 ```

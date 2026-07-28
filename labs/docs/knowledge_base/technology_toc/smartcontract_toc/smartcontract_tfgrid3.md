@@ -86,7 +86,7 @@ Usage of SU, CU and NU will be computed based on the prices and the rules that T
 
 Billing will be done in Database Tokens and will be send to the corresponding farmer. If the user runs out of funds the chain will set the contract state to `cancelled` or it will be removed from storage. The Node needs to act on this 'contract cancelled' event and decommission the workload.
 
-The main currency of this chain. More information on this is explained here: TODO
+The main currency of this chain. For more information, see the [ThreeFold Token](../../../documentation/threefold_token) documentation.
 
 ## Notes
 

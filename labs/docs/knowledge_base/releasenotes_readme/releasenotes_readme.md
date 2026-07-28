@@ -1,6 +1,6 @@
 ---
 title: "Release Notes"
-sidebar_position: 362
+sidebar_position: 361
 ---
 
 # ThreeFold Grid Release Notes
