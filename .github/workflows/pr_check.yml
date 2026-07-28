@@ -1,0 +1,33 @@
+name: PR Check
+
+# Validates a pull request before it is merged.
+#
+# The site build is the gate: with onBrokenLinks and onBrokenAnchors set to
+# 'throw' in docusaurus.config.js, any broken internal link or anchor fails
+# this job. External links are NOT checked here -- third-party rot must never
+# block a merge. Those are covered by the weekly link check instead.
+
+on:
+  pull_request:
+    branches: [ development, master ]
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        # Fails on broken internal links and anchors.
+        run: npm run build

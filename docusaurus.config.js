@@ -8,11 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   tagline: 'Documentation for ThreeFold Grid',
   url: 'https://manual.grid.tf',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
   favicon: 'img/logo_tft_light_short.png',
   organizationName: 'ThreeFold',
-  projectName: 'info_grid',
+  projectName: 'grid_manual',
   markdown: {
     mermaid: true,
   },
@@ -32,14 +33,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           // Generate sidebar from folder structure
           sidebarPath: undefined,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/threefold/manual/edit/main/',
+          editUrl: 'https://github.com/threefoldtech/grid_manual/edit/development/',
 
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/threefold/manual/edit/main/blog/',
+          editUrl: 'https://github.com/threefoldtech/grid_manual/edit/development/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
