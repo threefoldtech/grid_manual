@@ -140,7 +140,7 @@ It is highly recommended to set a Ubuntu systemd service to keep the Farmerbot r
     [Service]
     Restart=always
     RestartSec=5
-    ExecStart=/usr/local/bin/farmerbot run -e /root/farmerbotfiles/.env -c /root/farmerbotfiles/config.yml -d
+    ExecStart=/usr/local/bin/farmerbot run -a --continue-power-on-error -e /root/farmerbotfiles/.env -c /root/farmerbotfiles/config.yml -d
 
     [Install]
     WantedBy=multi-user.target     
@@ -232,7 +232,7 @@ You can also consult the [Farmerbot repository](https://github.com/threefoldtech
 
 ### Environment Variables File Template (.env)
 
-The network can be either `main`, `tets`, `dev` or `qa`. The following example is with the main network.
+The network can be either `main`, `test`, `dev` or `qa`. The following example is with the main network.
 
 ```
 MNEMONIC_OR_SEED="word1 word2 word3 ... word12"

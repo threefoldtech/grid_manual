@@ -31,3 +31,6 @@ yarn.lock
 /values/tft_value.md
 /values/tft_marketcap.md
 /values/*_MTFT_HOUR.md
+
+# Issue exports
+*-issues/
