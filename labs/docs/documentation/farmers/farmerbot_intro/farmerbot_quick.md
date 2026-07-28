@@ -140,7 +140,7 @@ It is highly recommended to set a Ubuntu systemd service to keep the Farmerbot r
     [Service]
     Restart=always
     RestartSec=5
-    ExecStart=/usr/local/bin/farmerbot run -e /root/farmerbotfiles/.env -c /root/farmerbotfiles/config.yml -d
+    ExecStart=/usr/local/bin/farmerbot run -a --continue-power-on-error -e /root/farmerbotfiles/.env -c /root/farmerbotfiles/config.yml -d
 
     [Install]
     WantedBy=multi-user.target     
