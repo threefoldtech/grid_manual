@@ -38,7 +38,7 @@ We create an SSH tunnel with port 5432:80, as it is this combination that we wil
 
 - Open a terminal and create an SSH tunnel
     ```
-    ssh -4 -L 5432:127.0.0.1:80 root@VM_IPv4_address>
+    ssh -4 -L 5432:127.0.0.1:80 root@<VM_IPv4_address>
     ```
 
 Simply leave this window open and follow the next steps.
@@ -49,7 +49,7 @@ We prepare the full to run nopCommerce.
 
 * Connect to the VM via SSH
     ``` 
-    ssh root@VM_IPv4_address
+    ssh root@<VM_IPv4_address>
     ```
 * Update the VM
    ```

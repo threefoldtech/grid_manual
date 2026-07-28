@@ -70,10 +70,10 @@ That's it. Now you have a bootstrap image on Zero-OS as a bootable removable med
 For the BIOS **USB** and the UEFI **EFI IMG** images, you can do the following on Linux:
 
 ```
-sudo dd status=progress if=FILELOCATION.ISO(or .IMG) of=/dev/sdX
+sudo dd status=progress if=FILELOCATION of=/dev/sdX
 ```
 
-Simply replace `X` by the proper disk for your USB key. To see your disks, write `lsblk` in the command line. Make sure you select the proper disk!
+Replace `FILELOCATION` by the path to the image you downloaded (the `.ISO` or the `.IMG` file), and replace `X` by the proper disk for your USB key. To see your disks, write `lsblk` in the command line. Make sure you select the proper disk!
 
 If you USB key is not new, make sure to format it before burning the Zero-OS image.
 

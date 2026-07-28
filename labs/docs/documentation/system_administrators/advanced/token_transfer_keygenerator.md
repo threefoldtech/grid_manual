@@ -81,4 +81,4 @@ Behind the scenes, following will happen:
 - Transferred TFTs from Stellar will be sent from the Stellar vault account to the user's Stellar account
 - TFTs will be burned on the TFChain for the transferred amount
 
-Example: ![](./img/swap_to_stellar.png ':size=400'.md)
+Example: ![](./img/swap_to_stellar.png)
