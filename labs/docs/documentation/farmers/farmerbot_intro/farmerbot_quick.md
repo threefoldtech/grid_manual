@@ -9,7 +9,7 @@ sidebar_position: 199
 
 ## Introduction
 
-In this guide, we show how to deploy the [Farmerbot](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/farmerbot) on a full VM running on the TFGrid. 
+In this guide, we show how to deploy the [Farmerbot](https://github.com/threefoldtech/zos_sdk_go/tree/development/farmerbot) on a full VM running on the TFGrid. 
 
 This guide can be done on bare metal or on a full VM running on the TFGrid. You need at least two 3Nodes on the same farm to make use of the Farmerbot.
 
@@ -74,9 +74,9 @@ We present the different steps to run the Farmerbot using the binaries.
 
 ### Download the Farmerbot Binaries
 
-- Download the latest [ThreeFold tfgrid-sdk-go release](https://github.com/threefoldtech/tfgrid-sdk-go/releases) and extract the farmerbot for your specific setup (here we use `x86_64`). On the line `wget ...`, make sure to replace `<latest_release>` with the latest Farmerbot release.
+- Download the latest [ThreeFold tfgrid-sdk-go release](https://github.com/threefoldtech/zos_sdk_go/releases) and extract the farmerbot for your specific setup (here we use `x86_64`). On the line `wget ...`, make sure to replace `<latest_release>` with the latest Farmerbot release.
     ```
-    wget https://github.com/threefoldtech/tfgrid-sdk-go/releases/download/<latest_release>/tfgrid-sdk-go_Linux_x86_64.tar.gz
+    wget https://github.com/threefoldtech/zos_sdk_go/releases/download/<latest_release>/tfgrid-sdk-go_Linux_x86_64.tar.gz
     tar xf tfgrid-sdk-go_Linux_x86_64.tar.gz farmerbot
     ```
 - Move the Farmerbot
@@ -118,7 +118,7 @@ For farmers with **ed25519** keys, the flag `-k` should be used. Note that by de
 farmerbot run -k ed25519 -e ~/farmerbotfiles/.env -c ~/farmerbotfiles/config.yml -d
 ```
 
-For more information on the supported commands, the [Additional Information section](farmerbot_information#supported-commands-and-flags). You can also consult the [Farmerbot repository](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/farmerbot).
+For more information on the supported commands, the [Additional Information section](farmerbot_information#supported-commands-and-flags). You can also consult the [Farmerbot repository](https://github.com/threefoldtech/zos_sdk_go/tree/development/farmerbot).
 
 Once you've verified that the Farmerbot runs properly, you can stop the Farmerbot and go to the next section to set a Farmerbot service. This step will ensure the Farmerbot keeps running after exiting the VM.
 
@@ -228,7 +228,7 @@ power:
 
 For more information on the configuration file, refer to the [Additional Information section](farmerbot_information#yaml-configuration-file-template).
 
-You can also consult the [Farmerbot repository](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/farmerbot).
+You can also consult the [Farmerbot repository](https://github.com/threefoldtech/zos_sdk_go/tree/development/farmerbot).
 
 ### Environment Variables File Template (.env)
 
@@ -270,7 +270,7 @@ farmerbot2.service
 
 This guide is meant to get you started quickly with the Farmerbot. That being said, there is a lot more that can be done with the Farmerbot.
 
-For more information on the Farmerbot, please refer to the [Additional Information section](./farmerbot_information). You can also consult the [official Farmerbot Go repository](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/farmerbot).
+For more information on the Farmerbot, please refer to the [Additional Information section](./farmerbot_information). You can also consult the [official Farmerbot Go repository](https://github.com/threefoldtech/zos_sdk_go/tree/development/farmerbot).
 
 If you have any questions, you can ask the ThreeFold community for help on the [ThreeFold Forum](https://forum.threefold.io/) or on the [ThreeFold Farmers Chat](https://t.me/threefoldfarmers) on Telegram.
 

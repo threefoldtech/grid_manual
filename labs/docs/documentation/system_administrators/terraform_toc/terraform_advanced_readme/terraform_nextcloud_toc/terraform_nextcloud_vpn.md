@@ -23,7 +23,7 @@ For now, let's see how to achieve this redundant deployment with Rsync!
 
 # 2-Node Terraform Deployment
 
-For this guide, we are deploying a Nextcloud AIO instance along a Backup VM, enabling daily backups of both VMs. The two VMs are connected by a WireGuard VPN. The deployment will be using the [Nextcloud FList](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/nextcloud) available in the **tf-images** ThreeFold repository. 
+For this guide, we are deploying a Nextcloud AIO instance along a Backup VM, enabling daily backups of both VMs. The two VMs are connected by a WireGuard VPN. The deployment will be using the [Nextcloud FList](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/nextcloud) available in the **tf-images** ThreeFold repository. 
 
 ## Create the Terraform Files
 

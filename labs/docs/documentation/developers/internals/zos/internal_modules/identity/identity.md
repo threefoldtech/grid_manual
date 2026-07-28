@@ -67,7 +67,7 @@ after:
 
 ## Interface
 
-For an up to date interface please check code [here](https://github.com/threefoldtech/zosbase/blob/main/pkg/identity.go)
+For an up to date interface please check code [here](https://github.com/threefoldtech/zos_base/blob/main/pkg/identity.go)
 ```go
 package pkg
 

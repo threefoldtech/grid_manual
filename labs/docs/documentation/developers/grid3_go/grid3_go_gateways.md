@@ -19,9 +19,9 @@ This generates a FQDN for your VM.
 import (
     "fmt"
 
-    "github.com/threefoldtech/tfgrid-sdk-go/grid-client/deployer"
-    "github.com/threefoldtech/tfgrid-sdk-go/grid-client/workloads"
-    "github.com/threefoldtech/tfgrid-sdk-go/grid-proxy/pkg/types"
+    "github.com/threefoldtech/zos_sdk_go/grid-client/deployer"
+    "github.com/threefoldtech/zos_sdk_go/grid-client/workloads"
+    "github.com/threefoldtech/zos_sdk_go/grid-proxy/pkg/types"
     "github.com/threefoldtech/zos/pkg/gridtypes/zos"
 )
 
@@ -71,8 +71,8 @@ In case you have a FQDN already pointing to the node, you can expose your VM usi
 import (
     "fmt"
 
-    "github.com/threefoldtech/tfgrid-sdk-go/grid-client/deployer"
-    "github.com/threefoldtech/tfgrid-sdk-go/grid-client/workloads"
+    "github.com/threefoldtech/zos_sdk_go/grid-client/deployer"
+    "github.com/threefoldtech/zos_sdk_go/grid-client/workloads"
     "github.com/threefoldtech/zos/pkg/gridtypes/zos"
 )
 

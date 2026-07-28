@@ -11,18 +11,18 @@ sidebar_position: 366
 
 ### Playground
 
-* Users should be able to attach more than one domain to a VM, edit and remove them. [#1055](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1055)
-* The user will be notified every 15 minutes if there are deployments on an offline node. [#1220](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1220)
-* Improvements of load time during listing deployments and error reporting. [#1213](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1213)
-* An error message will notify the user when contracts’ details cannot not be retrieved.[#1295](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1295)
-* Deploy button will be enabled and disabled after all verification is done.[#1300](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1300)
-* Node Id and status will be included in the contracts list.[#1277](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1277)
-* A new version of flist is supported while deploying a vm.[#1322](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1322)
+* Users should be able to attach more than one domain to a VM, edit and remove them. [#1055](https://github.com/threefoldtech/zos_sdk_ts/issues/1055)
+* The user will be notified every 15 minutes if there are deployments on an offline node. [#1220](https://github.com/threefoldtech/zos_sdk_ts/issues/1220)
+* Improvements of load time during listing deployments and error reporting. [#1213](https://github.com/threefoldtech/zos_sdk_ts/issues/1213)
+* An error message will notify the user when contracts’ details cannot not be retrieved.[#1295](https://github.com/threefoldtech/zos_sdk_ts/issues/1295)
+* Deploy button will be enabled and disabled after all verification is done.[#1300](https://github.com/threefoldtech/zos_sdk_ts/issues/1300)
+* Node Id and status will be included in the contracts list.[#1277](https://github.com/threefoldtech/zos_sdk_ts/issues/1277)
+* A new version of flist is supported while deploying a vm.[#1322](https://github.com/threefoldtech/zos_sdk_ts/issues/1322)
 
 ### UI Packages
 
-* The PDF Signer Web Component simplifies the process of signing PDF documents and sending them to a specified endpoint. This user-friendly PDF viewer is designed to make PDF signing and processing straightforward for your web applications.[#1056](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1056)
-* The Script Editor Web Component is a powerful tool that enables developers to seamlessly integrate a code editor into their web applications. It offers essential features such as script management and code copying, making it an ideal choice for building code-related applications or platforms.[#1057](https://github.com/threefoldtech/tfgrid-sdk-ts/issues/1057)
+* The PDF Signer Web Component simplifies the process of signing PDF documents and sending them to a specified endpoint. This user-friendly PDF viewer is designed to make PDF signing and processing straightforward for your web applications.[#1056](https://github.com/threefoldtech/zos_sdk_ts/issues/1056)
+* The Script Editor Web Component is a powerful tool that enables developers to seamlessly integrate a code editor into their web applications. It offers essential features such as script management and code copying, making it an ideal choice for building code-related applications or platforms.[#1057](https://github.com/threefoldtech/zos_sdk_ts/issues/1057)
 
 ## sdk-go
 
@@ -32,13 +32,13 @@ sidebar_position: 366
 
 ### Gridproxy
 
-* Separate contracts bills in a new endpoint to speed up the contracts endpoint. The new endpoint for bills is `/contracts/&lt;contract-id>/bills`. [#356](https://github.com/threefoldtech/tfgrid-sdk-go/pull/356)
-* Fix the possible duplicate records in the node table caused by the node gpu indexer. [#388](https://github.com/threefoldtech/tfgrid-sdk-go/pull/388)
+* Separate contracts bills in a new endpoint to speed up the contracts endpoint. The new endpoint for bills is `/contracts/&lt;contract-id>/bills`. [#356](https://github.com/threefoldtech/zos_sdk_go/pull/356)
+* Fix the possible duplicate records in the node table caused by the node gpu indexer. [#388](https://github.com/threefoldtech/zos_sdk_go/pull/388)
 
 ### Monbot
 
-* Add bridges monitor that periodically do transfers between stellar and tfchain and send a report by telegram bot. [#384](https://github.com/threefoldtech/tfgrid-sdk-go/pull/384)
-* Add contracts monitor that periodically send notifications for contracts in grace period or contracts on down nodes. [#405](https://github.com/threefoldtech/tfgrid-sdk-go/pull/405)
+* Add bridges monitor that periodically do transfers between stellar and tfchain and send a report by telegram bot. [#384](https://github.com/threefoldtech/zos_sdk_go/pull/384)
+* Add contracts monitor that periodically send notifications for contracts in grace period or contracts on down nodes. [#405](https://github.com/threefoldtech/zos_sdk_go/pull/405)
 
 ## Terraform
 
@@ -48,12 +48,12 @@ sidebar_position: 366
 
 Our latest addition to infrastructure as code, along with terraform, we offer a powerful solution to have a reproducible infrastructure using [pulumi](https://www.pulumi.com/) and Threefold.
 
-* Updating a vm in Pulumi can cause a replacement to a new vm, deleting the old one if not all vm inputs are given. [#37](https://github.com/threefoldtech/pulumi-threefold/issues/37)
+* Updating a vm in Pulumi can cause a replacement to a new vm, deleting the old one if not all vm inputs are given. [#37](https://github.com/threefoldtech/grid_pulumi/issues/37)
 * Our Pulumi provider has been released and its available on the Pulumi registry now (latest version v3.0.0). [Plugin page](https://www.pulumi.com/registry/packages/threefold/)
 
 ## ZOS
 
-* Mainly the performance tests reports [#1454](https://github.com/threefoldtech/home/issues/1454)
+* Mainly the performance tests reports [#1454](https://github.com/threefoldtech/grid_wiki/issues/1454)
 * Improvement to power mgmt 
 * Cache upgrade packages
 * Kernel version show up in ZUI [#2058](https://github.com/threefoldtech/zos/pull/2058)
@@ -63,8 +63,8 @@ Our latest addition to infrastructure as code, along with terraform, we offer a 
 
 ## TFChain
 
-* Improve IP validation and clean invalid public ips from TFChain storage. [#869](https://github.com/threefoldtech/tfchain/issues/869)
-* Fix a DAO bug that allows multiple vetoes from the same council member on the same proposal. [#858](https://github.com/threefoldtech/tfchain/issues/858)
+* Improve IP validation and clean invalid public ips from TFChain storage. [#869](https://github.com/threefoldtech/ledger_chain/issues/869)
+* Fix a DAO bug that allows multiple vetoes from the same council member on the same proposal. [#858](https://github.com/threefoldtech/ledger_chain/issues/858)
 
 
 ## Mycelium

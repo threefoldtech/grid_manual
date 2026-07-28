@@ -8,7 +8,7 @@ sidebar_position: 125
 ## Introduction
 
 The grid proxy has access to a postgres database containing information about the tfgrid, specifically information about grid nodes, farms, twins, and contracts.\
-The database is filled/updated by this [indexer](https://github.com/threefoldtech/tfchain_graphql).
+The database is filled/updated by this [indexer](https://github.com/threefoldtech/ledger_graphql).
 The grid proxy mainly retrieves information from the db with a few modifications for efficient retrieval (e.g. adding indices, caching node gpus, etc..).
 
 ## Max Open Connections

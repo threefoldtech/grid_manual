@@ -11,7 +11,7 @@ sidebar_position: 229
 
 [Pulumi](https://www.pulumi.com/) is an infrastructure as code platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-We present here the basic steps to test the examples within the [ThreeFold Pulumi](https://github.com/threefoldtech/pulumi-threefold) plugin repository. Once you've set the plugin and exported the necessary variables, the deployment process from one example to another is very similar.
+We present here the basic steps to test the examples within the [ThreeFold Pulumi](https://github.com/threefoldtech/grid_pulumi) plugin repository. Once you've set the plugin and exported the necessary variables, the deployment process from one example to another is very similar.
 
 Please note that the Pulumi plugin for ThreeFold Grid is not yet officially published. We look forward to your feedback on this project.
 
@@ -19,7 +19,7 @@ Please note that the Pulumi plugin for ThreeFold Grid is not yet officially publ
 
 In the manual, we cover some basic examples of Pulumi deployments on the grid. 
 
-You can access all the Pulumi deployment examples on the ThreeFold Pulumi repository [here](https://github.com/threefoldtech/pulumi-threefold/tree/development/examples).
+You can access all the Pulumi deployment examples on the ThreeFold Pulumi repository [here](https://github.com/threefoldtech/grid_pulumi/tree/development/examples).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ There are a few things to set up before exploring Pulumi. Since we will be using
 * [Install Pulumi](./pulumi_install) on your machine
 * Clone the **Pulumi-ThreeFold** repository
   * ```
-    git clone https://github.com/threefoldtech/pulumi-threefold
+    git clone https://github.com/threefoldtech/grid_pulumi
     ```
 * Change directory
   * ```

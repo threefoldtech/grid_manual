@@ -11,7 +11,7 @@ This document explains in a nutshell the internals of ZOS. This includes the boo
 
 ZOS is a linux based operating system in the sense that we use the main-stream linux kernel with no modifications (but heavily customized). The base image of ZOS includes linux, busybox, [zinit](https://github.com/threefoldtech/zinit) and other required tools that are needed during the boot process. The base image is also shipped with a bootstrap utility that is self-updating on boot which kick starts everything.
 
-For more details about the ZOS base image please check [0-initramfs](https://github.com/threefoldtech/0-initramfs).
+For more details about the ZOS base image please check [0-initramfs](https://github.com/threefoldtech/zos_initramfs).
 
 `ZOS` uses zinit as its `init` or `PID 1` process. `zinit` acts as a process manager and it takes care of starting all required services in the right order. Using simple configuration that is available under `/etc/zinit`.
 

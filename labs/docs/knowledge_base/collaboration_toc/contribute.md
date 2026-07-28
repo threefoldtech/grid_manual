@@ -7,11 +7,11 @@ sidebar_position: 393
 
 ## Quick Method: Create an Issue
 
-If you've found some issues or typos in the ThreeFold Manual, feel free to [create an issue on the ThreeFold Manual repository](https://github.com/threefoldtech/info_grid/issues) to let us know. We will then be able to fix it as soon as possible.
+If you've found some issues or typos in the ThreeFold Manual, feel free to [create an issue on the ThreeFold Manual repository](https://github.com/threefoldtech/grid_manual/issues) to let us know. We will then be able to fix it as soon as possible.
 
 The steps are simple:
 
-* Go to the [issues section of ThreeFold Manual](https://github.com/threefoldtech/info_grid/issues) repository on GitHub
+* Go to the [issues section of ThreeFold Manual](https://github.com/threefoldtech/grid_manual/issues) repository on GitHub
 * Click on `New Issue`
 * Choose an appropriate title
 * Explain briefly the issue you found
@@ -27,9 +27,9 @@ If you found an issue in the manual and you wish to fix the issue yourself, you 
 
 ### Main Steps to Add Content
 
-We present here the main steps to add content to the Threefold Manual by forking the repository [`threefoldtech/info_grid`](https://github.com/threefoldtech/info_grid) to your own Github account.
+We present here the main steps to add content to the Threefold Manual by forking the repository [`threefoldtech/info_grid`](https://github.com/threefoldtech/grid_manual) to your own Github account.
 
-* Go to the Threefold Manual repository: [https://github.com/threefoldtech/info_grid](https://github.com/threefoldtech/info_grid)
+* Go to the Threefold Manual repository: [https://github.com/threefoldtech/grid_manual](https://github.com/threefoldtech/grid_manual)
 * Fork the Development branch
   * On the top right corner, click `Fork -> Create a new fork`
 * Make changes in the forked repository

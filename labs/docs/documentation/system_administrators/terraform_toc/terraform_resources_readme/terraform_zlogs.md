@@ -9,7 +9,7 @@ sidebar_position: 248
 
 ## Introduction
 
-Zlogs is a utility that allows you to stream VM logs to a remote location. You can find the full description [here](https://github.com/threefoldtech/zosbase/tree/main/docs/manual/zlogs)
+Zlogs is a utility that allows you to stream VM logs to a remote location. You can find the full description [here](https://github.com/threefoldtech/zos_base/tree/main/docs/manual/zlogs)
 
 ## Using Zlogs
 

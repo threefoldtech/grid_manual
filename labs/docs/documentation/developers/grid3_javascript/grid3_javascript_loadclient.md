@@ -57,7 +57,7 @@ using e2e. That's similar to home servers by matrix
 - BackendStorage : can be `auto` which willl automatically adapt if running in node environment to use `filesystem backend` or the browser enviornment to use `localstorage backend`. Also you can set it to `kvstore` to use the tfchain keyvalue store module.
 - keypairType: is defaulted to `sr25519`, most likely you will never need to change it. `ed25519` is supported too.
 
-for more details, check [client options](https://github.com/threefoldtech/tfgrid-sdk-ts/blob/development/packages/grid_client/docs/client_configuration.md)
+for more details, check [client options](https://github.com/threefoldtech/zos_sdk_ts/blob/development/packages/grid_client/docs/client_configuration.md)
 
 > Note: The choice of the node is completely up to the user at this point. They need to do the capacity planning. Check [Node Finder](../../dashboard/deploy/node_finder) to know which nodes fits your deployment criteria.
 

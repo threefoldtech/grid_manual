@@ -100,7 +100,7 @@ There are multiple ways to create an flist:
    - Convert an existing docker image which is hosted on the docker hub
    - Push an archive like a tjz on the hub
    - A library and CLI tool exist to build the flist from scratch: doing it this way, the directory is locally populated, and the flist is then created from the CLI tool. 
-   - A [GitHub action](https://github.com/threefoldtech/publish-flist) allows to build a flist directly from GitHub action, useful for developers on GitHub 
+   - A [GitHub action](https://github.com/threefoldtech/zos_flist_publish) allows to build a flist directly from GitHub action, useful for developers on GitHub 
 
 Be aware that the flist system works a bit differently than the usual deployment of containers (dockers), which doesn't do mounting of volumes from your local disk into container for configuration. 
 With flists you need to modify your image to get configuration from environment. This is basically how docker was originally intended to be used. 

@@ -15,7 +15,7 @@ To provide a uniform deployment method, we use Docker for this guide. It is opti
 
 This guide is useful to get you started quickly with Pulumi on the TFGrid.
 
-Once you've successfully deployed a VM, you can try all the different YAML examples within the [pulumi-threefold repository](https://github.com/threefoldtech/pulumi-threefold). The examples are available in the subdirectory `/examples/yaml/`.
+Once you've successfully deployed a VM, you can try all the different YAML examples within the [pulumi-threefold repository](https://github.com/threefoldtech/grid_pulumi). The examples are available in the subdirectory `/examples/yaml/`.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Once you've successfully deployed a VM, you can try all the different YAML examp
     apt update && apt install -y curl git make
     curl -fsSL https://get.pulumi.com | sh
     export PATH=$PATH=:/root/.pulumi/bin
-    git clone https://github.com/threefoldtech/pulumi-threefold.git
+    git clone https://github.com/threefoldtech/grid_pulumi.git
     cd pulumi-threefold/examples/yaml/virtual_machine
 
     # Export the variables

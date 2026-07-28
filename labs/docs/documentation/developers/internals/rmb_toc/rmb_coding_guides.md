@@ -9,7 +9,7 @@ sidebar_position: 139
 
 We present coding guides for the reliable message bus (RMB).
 
-> This document will always be `work in progress`. [Read the official docs for updates](https://github.com/threefoldtech/rmb-rs/blob/main/docs/code-guide.md).
+> This document will always be `work in progress`. [Read the official docs for updates](https://github.com/threefoldtech/zos_rmb/blob/main/docs/code-guide.md).
 
 ## Module Structure
 

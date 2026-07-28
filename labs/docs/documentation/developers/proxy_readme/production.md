@@ -11,7 +11,7 @@ We show how to run grid proxy in production.
 
 ## Production Run
 
-- Download the latest binary [here](https://github.com/threefoldtech/tfgrid-sdk-go/tree/development/grid-client)
+- Download the latest binary [here](https://github.com/threefoldtech/zos_sdk_go/tree/development/grid-client)
 - add the execution permission to the binary and move it to the bin directory
 
   ```bash

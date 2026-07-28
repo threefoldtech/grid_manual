@@ -32,7 +32,7 @@ So what is `network`.Well, to allow developers to build and `zos` itself and mak
   - Update
   - Delete
 
-Note that `zos` API is available over `rmb` protocol. `rmb` which means `reliable message bus` is a simple messaging protocol that enables peer to peer communication over `yggdrasil` network. Please check [`rmb`](https://github.com/threefoldtech/rmb) for more information.
+Note that `zos` API is available over `rmb` protocol. `rmb` which means `reliable message bus` is a simple messaging protocol that enables peer to peer communication over `yggdrasil` network. Please check [`rmb`](https://github.com/threefoldtecharchive/rmb_archive) for more information.
 
 Simply put, `RMB` allows 2 entities two communicate securely knowing only their `id` an id is linked to a public key on the blockchain. Hence messages are verifiable via a signature.
 
@@ -165,7 +165,7 @@ type Workload struct {
 ### API
 Node is always connected to the RMB network with the node `twin`. Means the node is always reachable over RMB with the node `twin-id` as an address.
 
-The [node client](https://github.com/threefoldtech/zosbase/blob/main/client/node.go) should have a complete list of all available functions. documentations of the API can be found [here](./api.md)
+The [node client](https://github.com/threefoldtech/zos_base/blob/main/client/node.go) should have a complete list of all available functions. documentations of the API can be found [here](./api.md)
 
 ## Raid Controller Configuration
 

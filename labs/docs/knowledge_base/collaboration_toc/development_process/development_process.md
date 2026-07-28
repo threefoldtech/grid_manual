@@ -81,7 +81,7 @@ Creating a repository involves establishing a foundation for collaborative devel
 
 #### License
 
-- Include a LICENSE file specifying the project's licensing terms, threefoldtech is using [Apache2 License](https://github.com/threefoldtech/info_grid/blob/master/LICENSE).
+- Include a LICENSE file specifying the project's licensing terms, threefoldtech is using [Apache2 License](https://github.com/threefoldtech/grid_manual/blob/master/LICENSE).
 
 #### Github Templates
 
