@@ -31,7 +31,7 @@ Listen for a message on node2. Note that messages received while nothing is list
 a queue for later consumption. Wait for up to 1 minute.
 
 ```bash
-curl -v http://localhost:8989/api/v1/messages\?timeout\=60\
+curl -v http://localhost:8989/api/v1/messages\?timeout\=60
 ```
 
 The system will (immediately) receive our previously sent message:

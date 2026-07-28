@@ -67,7 +67,7 @@ farmerbot start --node <node ID> -m "<mnemonic>" -n <network> -d
 
 Where:
 
-```bash
+```text
 Flags:
     --node uint32       the node ID you want to use
 
@@ -87,7 +87,7 @@ farmerbot start all --farm <farm ID> -m "<mnemonic>" -n <network> -d
 
 Where:
 
-```bash
+```text
 Flags:
     --farm uint32       the farm ID you want to start your nodes ins
 

@@ -30,7 +30,7 @@ you can either Generate a db with relevant schema to test things locally quickly
       --postgres-db tfgrid-graphql \
       --postgres-password postgres \
       --postgres-user postgres \
-      --reset \
+      --reset
     ```
 
 ### Method 2: Fill the DB from a Production db dump file, for example if you have `dump.sql` file, you can run: 
