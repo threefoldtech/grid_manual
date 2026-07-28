@@ -368,10 +368,10 @@ To clean up container images created X hours ago, you can use the following temp
 docker image prune -a --force --filter "until=Xh"
 ```
 
-To clean up container images created before a given date, you can use the following template (replace ` with the complete date):
+To clean up container images created before a given date, you can use the following template (replace `<date>` with the complete date):
 
 ```
-docker image prune -a --force --filter "until=`"
+docker image prune -a --force --filter "until=<date>"
 ```
 
 Note: An example of a complete date would be `2023-01-04T00:00:00`
