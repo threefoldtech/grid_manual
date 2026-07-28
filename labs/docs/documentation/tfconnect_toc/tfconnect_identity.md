@@ -1,6 +1,6 @@
 ---
 title: "Identity"
-sidebar_position: 74
+sidebar_position: 73
 ---
 
 # ThreeFold Connect Identity

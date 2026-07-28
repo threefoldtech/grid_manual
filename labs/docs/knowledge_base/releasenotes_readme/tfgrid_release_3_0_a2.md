@@ -84,7 +84,7 @@ https://github.com/threefoldtech/zos/releases
 
 ## QSFS
 
-TODO
+See the [Quantum Safe Filesystem](../technology_toc/primitives_toc/storage_toc/qsfs) documentation.
 
 ## gridproxy v1.0.0-rc8
 
@@ -183,7 +183,7 @@ Following list is incomplete but gives some issues to think about.
 
 ## QSFS
 
-TODO
+See the [Quantum Safe Filesystem](../technology_toc/primitives_toc/storage_toc/qsfs) documentation.
 
 
 - [TFgrid 3.0 announcement](https://forum.threefold.io/t/announcement-of-tfgrid-3-0/1132)
