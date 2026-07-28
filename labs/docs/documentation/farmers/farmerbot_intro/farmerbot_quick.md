@@ -232,7 +232,7 @@ You can also consult the [Farmerbot repository](https://github.com/threefoldtech
 
 ### Environment Variables File Template (.env)
 
-The network can be either `main`, `tets`, `dev` or `qa`. The following example is with the main network.
+The network can be either `main`, `test`, `dev` or `qa`. The following example is with the main network.
 
 ```
 MNEMONIC_OR_SEED="word1 word2 word3 ... word12"
