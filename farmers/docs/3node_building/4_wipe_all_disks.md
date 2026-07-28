@@ -79,23 +79,29 @@ This is the recommended method: you name one disk explicitly, so there is no ris
 Set the disk you want to wipe, then run the block below as is. Replace `/dev/sda` with your disk (e.g. `/dev/nvme0n1`).
 
 ```
-DISK=/dev/sda
-PARTS=$(lsblk -lnpo NAME "$DISK" | tail -n +2)
+# Only run this from a live USB, never on a machine you are still using.
+if ! findmnt -no SOURCE /cdrom >/dev/null 2>&1 && \
+   ! findmnt -no SOURCE /run/live/medium >/dev/null 2>&1; then
+  echo "Not running from a live USB. Stop here."
+else
+  DISK=/dev/sda
+  PARTS=$(lsblk -lnpo NAME "$DISK" | tail -n +2)
 
-# 1. Release the disk (a busy disk cannot be wiped)
-[ -n "$PARTS" ] && sudo swapoff $PARTS 2>/dev/null
-[ -n "$PARTS" ] && sudo umount  $PARTS 2>/dev/null
-sudo mdadm --stop --scan 2>/dev/null
-sudo vgchange -an        2>/dev/null
+  # 1. Release the disk (a busy disk cannot be wiped)
+  [ -n "$PARTS" ] && sudo swapoff $PARTS 2>/dev/null
+  [ -n "$PARTS" ] && sudo umount  $PARTS 2>/dev/null
+  sudo mdadm --stop --scan 2>/dev/null
+  sudo vgchange -an        2>/dev/null
 
-# 2. Wipe it
-[ -n "$PARTS" ] && sudo wipefs -af $PARTS
-sudo sgdisk --zap-all "$DISK"
-sudo wipefs -af "$DISK"
+  # 2. Wipe it
+  [ -n "$PARTS" ] && sudo wipefs -af $PARTS
+  sudo sgdisk --zap-all "$DISK"
+  sudo wipefs -af "$DISK"
 
-# 3. Make the kernel re-read the disk
-sudo partprobe "$DISK"
-sudo udevadm settle
+  # 3. Make the kernel re-read the disk
+  sudo partprobe "$DISK"
+  sudo udevadm settle
+fi
 ```
 
 Each part matters:
@@ -104,6 +110,8 @@ Each part matters:
 - **`wipefs` on the partitions, then the disk.** Wiping only the disk leaves the filesystem signatures that live inside each partition. Those can reappear later.
 - **`sgdisk --zap-all`** removes both the primary GPT header at the start of the disk and the backup GPT header at the end, plus the MBR.
 - **`partprobe` and `udevadm settle`** make the kernel re-read the disk, so the verification below shows the real state rather than a cached one.
+
+> **What erases data and what does not.** `mdadm --stop` and `vgchange -an` only *deactivate* RAID arrays and LVM volume groups. They erase nothing, and they fail harmlessly if something is still in use. An array can be brought back with `sudo mdadm --assemble --scan`, and a volume group with `sudo vgchange -ay`. The commands that actually erase data are `wipefs` and `sgdisk`, and both act only on the disk you set in `DISK`.
 
 > If you get `sgdisk: command not found`, install it with `sudo apt update && sudo apt install -y gdisk`, then run the block again.
 
