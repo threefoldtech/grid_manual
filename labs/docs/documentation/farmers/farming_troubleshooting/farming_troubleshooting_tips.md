@@ -29,23 +29,30 @@ You might have to try UEFI first and if it doesn't work, try BIOS. Usually when 
 
 And then... nothing. This means that you are still in the BIOS of the hardware and boot is not even started yet. When this happens, try the BIOS mode of your computer. 
 
-### When running wipefs to wipe my disks on Linux, I get either of the following errors: "syntax error near unexpected token" or "Probing Initialized Failed". Is there a fix?
+### When running wipefs to wipe my disks on Linux, I get a shell error, "Probing Initialized Failed", or the wipe appears to do nothing. Is there a fix?
 
-Many different reasons can cause this issue. When you get that error, sometimes it is because your are trying to wipe your boot USB by accident. If this is not the case, and you really are trying to wipe the correct disk, here are some fixes to try out, with the disk `sda` as an example:
+Follow the procedure in [Wipe All the Disks](../3node_building/wipe_all_disks), which releases the disk before wiping it and then verifies the result. The most common causes are below, with the disk `sda` as an example.
 
-* Fix 1:
-  * Force the wiping of the disk:
-    * ```
-      sudo wipefs -af /dev/sda
-      ```
-* Fix 2:
-  * Unmount the disk then wipe it:
-    * ```
-      sudo umount /dev/sda
-      ```
-    * ```
-      sudo wipefs -a /dev/sda
-      ```
+* **The disk is busy.** Ubuntu's *Try Mode* automatically mounts partitions it finds and can activate swap on them. A disk that is mounted, in use as swap, or held by a software RAID array or an LVM volume group cannot be wiped. Release it first:
+  * ```
+    sudo swapoff /dev/sda1 && sudo umount /dev/sda1
+    sudo mdadm --stop --scan
+    sudo vgchange -an
+    ```
+  * To find what is still holding the disk: `cat /proc/mdstat`, `sudo dmsetup ls`, `sudo swapon --show`, `lsblk -o NAME,MOUNTPOINTS`
+* **Only the disk was wiped, not its partitions.** Wipe the partition signatures first, then the disk itself:
+  * ```
+    sudo wipefs -af /dev/sda1 /dev/sda2
+    sudo sgdisk --zap-all /dev/sda
+    sudo wipefs -af /dev/sda
+    ```
+* **You are wiping your boot USB by accident.** Identify the disk you booted from before wiping anything:
+  * ```
+    lsblk -no PKNAME "$(findmnt -no SOURCE /cdrom 2>/dev/null || findmnt -no SOURCE /run/live/medium 2>/dev/null)"
+    ```
+* **`sgdisk: command not found`.** Install it with `sudo apt update && sudo apt install -y gdisk`.
+
+Always confirm the result with `sudo wipefs -n /dev/sda`, which reports remaining signatures without changing anything. It must print nothing.
 
 ### Disk Not Recognized by Zero-OS
 
