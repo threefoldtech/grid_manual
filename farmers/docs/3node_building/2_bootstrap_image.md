@@ -12,11 +12,11 @@ We will now learn how to create a Zero-OS bootstrap image in order to boot a DIY
 
 Let's download the Zero-OS bootstrap image via the Zero-OS Boot Generator for Grid V3: [https://v3.bootstrap.grid.tf/](https://v3.bootstrap.grid.tf/)
 
-![](./img/zos_boot_v4_1.png) 
+![](./img/zos_boot_v3_1.png) 
 
 On the Boot Generator page, write your farm ID and choose `Production` mode to deploy on mainnet.
 
-![](./img/zos_boot_v4_2.png)  
+![](./img/zos_boot_v3_2.png)  
 
 Choose a bootstrap image format to download.
 
@@ -27,14 +27,14 @@ If your system is new, choose an image format for a `UEFI` bootable kernel. You 
 - `EFI FILE`
   - Format the USB to one `FAT` partition and save the bootstrap image as `/EFI/BOOT/BOOTX64.EFI`.
 
-![](./img/zos_boot_v4_3.png)  
+![](./img/zos_boot_v3_3.png)  
 
 For older systems, choose an image format for a `BIOS` bootable kernel. 
 
 - For BIOS CD/DVD, choose **ISO**.
 - For BIOS USB, choose **USB**.
 
-![](./img/zos_boot_v4_4.png) 
+![](./img/zos_boot_v3_4.png) 
 
 Next, we cover in details how to burn the bootstrap image.
 
