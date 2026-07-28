@@ -108,7 +108,7 @@ EFI variables are not supported on this system.
 ```
 
 - A server in UEFI mode would have the following output:
-```sh
+```console
 root@rescue ~ # efibootmgr 
 BootCurrent: 0001
 Timeout: 1 seconds

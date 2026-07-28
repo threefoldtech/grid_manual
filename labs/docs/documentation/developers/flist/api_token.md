@@ -24,7 +24,7 @@ curl -H "Authorization: bearer <API_Token>" https://hub.grid.tf/api/flist/me
 
 You should see the following line with your own 3BotID
 
-```bash
+```json
 {"status": "success", "payload": {"username": "<3BotID>.3bot"}}
 ```
 

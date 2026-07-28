@@ -32,7 +32,7 @@ Then choose the key name and passphrase or simply press return twice to accept t
 When the process has finished, the private key and the public key can be found in the `~/.ssh` directory accessible from the Ubuntu terminal.
 You can also access the key from Windows file manager in the following folder:
 
-```sh
+```text
 \\wsl$\\Ubuntu\home\<username>\.ssh\
 ```
 
