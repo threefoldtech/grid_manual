@@ -73,14 +73,14 @@ https://github.com/threefoldtech/zos/releases
 
 ### detailed projects list
 
-- `https://github.com/threefoldtech/grid_weblets/projects/1`
-- `https://github.com/threefoldtech/grid_weblets/projects/4`
-- `https://github.com/threefoldtech/grid_weblets/projects/6`
-- `https://github.com/threefoldtech/grid_weblets/projects/6`
-- `https://github.com/threefoldtech/grid_weblets/projects/7`
-- `https://github.com/threefoldtech/grid_weblets/projects/8`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/1`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/4`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/6`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/6`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/7`
+- `https://github.com/threefoldtecharchive/grid_weblets/projects/8`
 
-`https://github.com/threefoldtech/grid_weblets/releases`
+`https://github.com/threefoldtecharchive/grid_weblets/releases`
 
 ## QSFS
 
@@ -106,7 +106,7 @@ Following list is incomplete but gives some issues to think about.
 - Docker & ZOS containers [differences](https://github.com/threefoldtech/zos/issues/1483)
 - ZOS workloads upgrade [issue](https://github.com/threefoldtech/zos/issues/1425)
 - Terraform projects [don't reflect in the weblets](https://github.com/threefoldtech/terraform-provider-grid/issues/146)
-- Can't detach public IP from a VM and removing it from a contract [issue](https://github.com/threefoldtech/tfchain/issues/175), please note you can still create each in separate contracts.
+- Can't detach public IP from a VM and removing it from a contract [issue](https://github.com/threefoldtech/ledger_chain/issues/175), please note you can still create each in separate contracts.
 
 # ThreeFold Release Notes TFGrid 3.0.0 Alpha 1 (Live on mainnet)
 
@@ -178,7 +178,7 @@ Following list is incomplete but gives some issues to think about.
 - Support Virtual machine
 - Support CapRover
 - Support Kubernetes
-`https://github.com/threefoldtech/grid_weblets/releases`
+`https://github.com/threefoldtecharchive/grid_weblets/releases`
 - Capacity planning deployment
 
 ## QSFS
@@ -202,4 +202,4 @@ Following list is incomplete but gives some issues to think about.
 - Docker & ZOS containers [differences](https://github.com/threefoldtech/zos/issues/1483)
 - ZOS workloads upgrade [issue](https://github.com/threefoldtech/zos/issues/1425)
 - Terraform projects [don't reflect in the weblets](https://github.com/threefoldtech/terraform-provider-grid/issues/146)
-- Can't detach public IP from a VM and removing it from a contract [issue](https://github.com/threefoldtech/tfchain/issues/175), please note you can still create each in separate contracts.
+- Can't detach public IP from a VM and removing it from a contract [issue](https://github.com/threefoldtech/ledger_chain/issues/175), please note you can still create each in separate contracts.

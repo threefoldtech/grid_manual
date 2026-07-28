@@ -23,7 +23,7 @@ If node was restarted, `provisiond` tries to bring all active workloads back to 
 - `zmachine` (virtual machine)
 - `zmount` (disk): usable only by a `zmachine`
 - `public-ip` (v4 and/or v6): usable only by a `zmachine`
-- [`zdb`](https://github.com/threefoldtech/0-DB) `namespace`
-- [`qsfs`](https://github.com/threefoldtech/quantum-storage)
+- [`zdb`](https://github.com/threefoldtech/0-db) `namespace`
+- [`qsfs`](https://github.com/threefoldtech/qss_quantum_storage)
 - `zlogs`
 - `gateway`

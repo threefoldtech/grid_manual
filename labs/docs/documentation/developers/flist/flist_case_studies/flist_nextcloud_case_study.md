@@ -23,7 +23,7 @@ One convenient thing about the flist technology is that it is possible to conver
 
 The goal of this case study is to give you enough information and tools so that you can build your own flist projects and deploy on the ThreeFold Grid.
 
-We will explore the different files needed to create the flist and explain the overall process. Instead of starting from scratch, we will analyze the Nextcloud flist directory in the [tf-images](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/nextcloud) ThreeFold repository. As the project is already done, it will be easier to get an overview of the process and the different components so you can learn to create your own.
+We will explore the different files needed to create the flist and explain the overall process. Instead of starting from scratch, we will analyze the Nextcloud flist directory in the [tf-images](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/nextcloud) ThreeFold repository. As the project is already done, it will be easier to get an overview of the process and the different components so you can learn to create your own.
 
 ## The Overall Process
 
@@ -46,9 +46,9 @@ In our case, the flist we will be using has some specific configurations dependi
 
 As we've said previously, we will explore the different components of the existing Nextcloud flist directory. We thus want to check the existing files and try to understand as much as possible how the different components work together. This is also a very good introduction to the ThreeFold ecosystem.
 
-We will be using the files available on the [ThreeFold Github page](https://github.com/threefoldtech). In our case, we want to explore the repository [tf-images](https://github.com/threefoldtech/tf-images).
+We will be using the files available on the [ThreeFold Github page](https://github.com/threefoldtech). In our case, we want to explore the repository [tf-images](https://github.com/threefoldtech/zos_images).
 
-If you go in the subsection [tfgrid3](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3), you can see many different flists available. In our case, we want to deploy the [Nextcloud All-in-One Flist](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/nextcloud). 
+If you go in the subsection [tfgrid3](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3), you can see many different flists available. In our case, we want to deploy the [Nextcloud All-in-One Flist](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/nextcloud). 
 
 ## Nextcloud Flist Directory Tree
 
@@ -212,7 +212,7 @@ The **README.md** file has the main goal of explaining clearly to the user the f
 
 We also give the necessary steps to create the Docker image and convert it into an flist starting directly with the Nextcloud directory. This can be useful for users that want to create their own flist, instead of using the [official ThreeFold Nextcloud flist](https://hub.grid.tf/tf-official-apps/threefoldtech-nextcloudaio-latest.flist).
 
-To read the complete README.md file, go to [this link](https://github.com/threefoldtech/tf-images/blob/development/tfgrid3/nextcloud/README.md).
+To read the complete README.md file, go to [this link](https://github.com/threefoldtech/zos_images/blob/development/tfgrid3/nextcloud/README.md).
 
 ## scripts Folder
 
@@ -551,7 +551,7 @@ We've now gone through all the files in the Nextcloud flist directory. You shoul
 
 To build your own Nextcloud docker image, you would simply need to clone this directory to your local computer and to follow the steps presented in the next section Docker Publishing Steps.
 
-To have a look at the complete directory, you can always refer to the [Nextcloud flist directory](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/nextcloud) on the ThreeFold tf-images repository.
+To have a look at the complete directory, you can always refer to the [Nextcloud flist directory](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/nextcloud) on the ThreeFold tf-images repository.
 
 # Docker Publishing Steps
 

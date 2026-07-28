@@ -29,7 +29,7 @@ One amazing thing about the flist technology is that it is possible to convert a
 
 The goal of this case study is to give you enough information and tools so that you can yourself build your own flist projects and deploy on the ThreeFold Grid.
 
-This case study is not meant to show you all the detailed steps on creating an flist from scratch. We will instead start with some files templates available on the ThreeFold repository [tf-images](https://github.com/threefoldtech/tf-images). This is one of the many advantages of working with open-source projects: we can easily get inspiration from the already available codes of the many ThreeFold repositories and work our way up from there.
+This case study is not meant to show you all the detailed steps on creating an flist from scratch. We will instead start with some files templates available on the ThreeFold repository [tf-images](https://github.com/threefoldtech/zos_images). This is one of the many advantages of working with open-source projects: we can easily get inspiration from the already available codes of the many ThreeFold repositories and work our way up from there.
 
 
 
@@ -48,11 +48,11 @@ To give you a bird's view of the whole project, here are the main steps:
 
 As we've said previously, we will not explore all the details of creating an flist from scratch. This would be done in a subsequent guide. For now, we want to take existing codes and work our way from there. This is not only quicker, but it is a good way to get to know the ThreeFold's ecosystem and repositories.
 
-We will be using the code available on the [ThreeFold Github page](https://github.com/threefoldtech). In our case, we want to explore the repository [tf-images](https://github.com/threefoldtech/tf-images).
+We will be using the code available on the [ThreeFold Github page](https://github.com/threefoldtech). In our case, we want to explore the repository [tf-images](https://github.com/threefoldtech/zos_images).
 
-If you go on the subsection [tfgrid3](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3), you can see many different flists available. In our case, we want to deploy the Debian Linux distribution. It is thus logic to try and find similar Linux distributions to take inspiration from.
+If you go on the subsection [tfgrid3](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3), you can see many different flists available. In our case, we want to deploy the Debian Linux distribution. It is thus logic to try and find similar Linux distributions to take inspiration from.
 
-For this case study, we draw inspiration from the [Ubuntu 22.04](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/ubuntu22.04) directory.
+For this case study, we draw inspiration from the [Ubuntu 22.04](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/ubuntu22.04) directory.
 
 If we look at the Ubuntu 22.04 directory tree, this is what we get:
 
@@ -171,13 +171,13 @@ Here another service `sshd.yaml` runs after the `ssh-init.yaml` process.
 
 As every good programmer knows, a good code is nothing without some good documentation to help others understand what's going on! This is where the `README.md` file comes into play.
 
-In this file, we can explain what our code is doing and offer steps to properly configure the whole deployment. For the users that will want to deploy the flist on the ThreeFold Playground, they would need the FLIst URL and the basic steps to deploy a Micro VM on the TFGrid. We will thus add this information in the README.md file. This information can be seen in the [section below](#deploy-the-flist-on-the-tf-playground). To read the complete README.md file, go to [this link](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/debian).
+In this file, we can explain what our code is doing and offer steps to properly configure the whole deployment. For the users that will want to deploy the flist on the ThreeFold Playground, they would need the FLIst URL and the basic steps to deploy a Micro VM on the TFGrid. We will thus add this information in the README.md file. This information can be seen in the [section below](#deploy-the-flist-on-the-tf-playground). To read the complete README.md file, go to [this link](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/debian).
 
 ### Putting it All Together
 
 We've now went through all the files available in the Ubuntu 22.04 directory on the tf-images repository. To build your own image, you would simply need to put all those files in a local folder on your computer and follow the steps presented at the next section, [Docker Publishing Steps](#docker-publishing-steps).
 
-To have a look at the final result of the changes we bring to the Ubuntu 22.04 version, have a look at this [Debian directory](https://github.com/threefoldtech/tf-images/tree/development/tfgrid3/debian) on the ThreeFold's tf-images repository.
+To have a look at the final result of the changes we bring to the Ubuntu 22.04 version, have a look at this [Debian directory](https://github.com/threefoldtech/zos_images/tree/development/tfgrid3/debian) on the ThreeFold's tf-images repository.
 
 
 

@@ -22,7 +22,7 @@ Twins are stored on tfchain. hence identity of twins is granted not to be spoofe
 Once all twins has their data set correctly on the chain. Any 2 twins can communicate with full end-to-end encryption as follows:
 
 - A twin establish a WS connection to his relay of choice
-- A twin create an `envelope` as defined by the protobuf [schema](https://github.com/threefoldtech/rmb-rs/blob/main/proto/types.proto)
+- A twin create an `envelope` as defined by the protobuf [schema](https://github.com/threefoldtech/zos_rmb/blob/main/proto/types.proto)
 - Twin fill in all envelope information (more about this later)
 - Twin pushes the envelope to the relay
   - If the destination twin is also using the same relay, message is directly forwarded to this twin

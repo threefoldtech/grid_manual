@@ -20,7 +20,7 @@ We cover how to load client using the Go client.
 Import `deployer` package to your project:
 
 ```go
-import "github.com/threefoldtech/tfgrid-sdk-go/grid-client/deployer"
+import "github.com/threefoldtech/zos_sdk_go/grid-client/deployer"
 ```
 
 Create new Client:

@@ -13,7 +13,7 @@ With Pulumi, you can express your infrastructure requirements using the language
 
 [Pulumi](https://www.pulumi.com/) is a cloud-native infrastructure as code (IaC) platform that allows developers to manage their infrastructure using code. It supports a wide range of cloud providers, including ThreeFold Grid. Consult the official [Pulumi documentation](https://www.pulumi.com/docs/) for more information.
 
-The [Pulumi plugin for ThreeFold Grid](https://github.com/threefoldtech/pulumi-provider-grid) provides developers with a way to deploy and manage their ThreeFold Grid resources using Pulumi. This means that developers can benefit from all of the features and benefits that Pulumi offers, such as cross-cloud support, type safety, preview and diff, and parallel execution -still in the works-.
+The [Pulumi plugin for ThreeFold Grid](https://github.com/threefoldtech/grid_pulumi) provides developers with a way to deploy and manage their ThreeFold Grid resources using Pulumi. This means that developers can benefit from all of the features and benefits that Pulumi offers, such as cross-cloud support, type safety, preview and diff, and parallel execution -still in the works-.
 
 Please note that the Pulumi plugin for ThreeFold Grid is not yet officially published. We look forward to your feedback on this project.
 

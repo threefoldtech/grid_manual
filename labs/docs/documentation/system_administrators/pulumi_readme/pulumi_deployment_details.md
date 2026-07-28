@@ -77,11 +77,11 @@ This means that, to execute, you just need to type `make run` and to destroy, yo
 
 ## Creating a Network
 
-We address here how to create a [network](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/network).
+We address here how to create a [network](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/network).
 
 ### Pulumi File
 
-You can find the original file [here](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/network/Pulumi.yaml).
+You can find the original file [here](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/network/Pulumi.yaml).
 
 ```yml
 name: pulumi-threefold
@@ -91,7 +91,7 @@ resources:
   provider:
     type: pulumi:providers:threefold
     options:
-      pluginDownloadURL: github://api.github.com/threefoldtech/pulumi-threefold # optional
+      pluginDownloadURL: github://api.github.com/threefoldtech/grid_pulumi # optional
     properties:
       mnemonic:
 
@@ -135,7 +135,7 @@ We then start by initializing the resources. The provider which we loaded in the
   provider:
     type: pulumi:providers:threefold
     options:
-      pluginDownloadURL: github://api.github.com/threefoldtech/pulumi-threefold # optional
+      pluginDownloadURL: github://api.github.com/threefoldtech/grid_pulumi # optional
     properties:
       mnemonic:
 
@@ -181,7 +181,7 @@ outputs:
 
 ## Creating a Virtual Machine
 
-Now, we will check an [example](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/virtual_machine) on how to create a virtual machine.
+Now, we will check an [example](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/virtual_machine) on how to create a virtual machine.
 
 Just like we've seen above, we will have two files `Makefile` and `Pulumi.yaml` where we describe the infrastructure.
 
@@ -193,7 +193,7 @@ resources:
   provider:
     type: pulumi:providers:threefold
     options:
-      pluginDownloadURL: github://api.github.com/threefoldtech/pulumi-threefold # optional
+      pluginDownloadURL: github://api.github.com/threefoldtech/grid_pulumi # optional
     properties:
       mnemonic:
 
@@ -300,7 +300,7 @@ That's it! You can now execute `make run` to bring the infrastructure up.
 
 ## Kubernetes
 
-We now see how to deploy a [Kubernetes cluster using Pulumi](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/kubernetes/Pulumi.yaml).
+We now see how to deploy a [Kubernetes cluster using Pulumi](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/kubernetes/Pulumi.yaml).
 
 ```yaml
   content was removed for brevity
@@ -341,7 +341,7 @@ Now, we define the Kubernetes resource `grid:internal:Kubernetes` that has maste
 
 ## Creating a Domain
 
-The ThreeFold Pulumi repository also covers examples on [how to work with TFGrid gateways](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/gateway_name/Pulumi.yaml). 
+The ThreeFold Pulumi repository also covers examples on [how to work with TFGrid gateways](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/gateway_name/Pulumi.yaml). 
 
 The basic idea is that you have a virtual machine workload on a specific IP, e.g. public IPv4, IPv6, or Planetary Network, and you want to access it using domains.
 
@@ -392,7 +392,7 @@ Some things to note:
 
 ### Example of a Fully Controlled Domain
 
-Here's an [example](https://github.com/threefoldtech/pulumi-provider-grid/blob/development/examples/yaml/gateway_fqdn/Pulumi.yaml) of a more complicated, but fully controlled domain.
+Here's an [example](https://github.com/threefoldtech/grid_pulumi/blob/development/examples/yaml/gateway_fqdn/Pulumi.yaml) of a more complicated, but fully controlled domain.
 
 ```yml
   code removed for brevity

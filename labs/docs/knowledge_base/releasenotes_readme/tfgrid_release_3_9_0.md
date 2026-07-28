@@ -40,7 +40,7 @@ Reliable Message Bus Relay (RMB-RS) is a secure communication panel that allows 
 - End-to-end encryption support.
 - Support for third-party hosted Relays. Anyone can host a Relay and people can use it safely since there is no way messages can be inspected while using e2e. That's similar to home servers by matrix.
 
-See [Specifications](https://github.com/threefoldtech/rmb-rs/blob/main/docs/readme.md) for more information.
+See [Specifications](https://github.com/threefoldtech/zos_rmb/blob/main/docs/readme.md) for more information.
 
 > Below is the list of the __Public Relay Addresses__ hosted by Threefold:
 
@@ -51,8 +51,8 @@ See [Specifications](https://github.com/threefoldtech/rmb-rs/blob/main/docs/read
 
 __Impacted Clients:__
 
-- [RMB-SDK-TS](https://github.com/threefoldtech/rmb-sdk-ts/releases/tag/v1.1.1)
-- [RMB-SDK-GO](https://github.com/threefoldtech/rmb-sdk-go/releases/tag/v1.0.0)
+- [RMB-SDK-TS](https://github.com/threefoldtecharchive/rmb_sdk_ts/releases/tag/v1.1.1)
+- [RMB-SDK-GO](https://github.com/threefoldtecharchive/rmb-sdk-go/releases/tag/v1.0.0)
 
 
 ### TFChain v2.3.0
@@ -95,7 +95,7 @@ TF Farmerbot is a new component that aim as a power management solution that wou
 - Disable twin deletion
 - Bug fixes around data validations, and more.
 
-Please follow [this milestone](https://github.com/threefoldtech/tfchain/milestone/11) for more.
+Please follow [this milestone](https://github.com/threefoldtech/ledger_chain/milestone/11) for more.
 
 ### ZOS v3.6.0
 
@@ -124,7 +124,7 @@ Please follow [this milestone](https://github.com/threefoldtech/zos/milestone/12
 - Support Mnemonics field editing
 - Removed flash messages after successfull deployment
 
-Please follow [this milestone](https://github.com/threefoldtech/grid_weblets/milestone/9) for more details
+Please follow [this milestone](https://github.com/threefoldtecharchive/grid_weblets/milestone/9) for more details
 
 ### TF Dashboard v1.4.0
 
@@ -135,7 +135,7 @@ Please follow [this milestone](https://github.com/threefoldtech/grid_weblets/mil
 - Filter farms by pricing policy support
 - Resource pricing calculator discount distinction between shared and dedicated nodes
 
-Please follow [this milestone](https://github.com/threefoldtech/tfgrid_dashboard/milestone/13) for more details
+Please follow [this milestone](https://github.com/threefoldtecharchive/tfgrid_dashboard/milestone/13) for more details
 
 ### TF GridClient v2.0.0
 
@@ -169,7 +169,7 @@ The new version of RMB written in Rust
 
 - Removed the proxying features, obsoleted by the new RMB.
 
-Please follow [this milestone](https://github.com/threefoldtech/tfgridclient_proxy/milestone/6) for more details
+Please follow [this milestone](https://github.com/threefoldtecharchive/tfgridclient_proxy/milestone/6) for more details
 
 
 

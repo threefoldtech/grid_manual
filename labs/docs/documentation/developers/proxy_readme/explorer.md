@@ -14,7 +14,7 @@ The Grid Explorer is a rest API used to index a various information from the TFC
 - Due to limitations on indexing information from the blockchain, Complex inter-tables queries and limitations can't be applied directly on the chain.
 - Here comes the TFGridDB, a shadow database contains all the data on the chain which is being updated each 2 hours.
 - Then the explorer can apply a raw SQL queries on the database with all limitations and filtration needed.
-- The used technology to extract the info from the blockchain is Subsquid check the [repo](https://github.com/threefoldtech/tfchain_graphql).
+- The used technology to extract the info from the blockchain is Subsquid check the [repo](https://github.com/threefoldtech/ledger_graphql).
 
 ## Explorer Endpoints
 

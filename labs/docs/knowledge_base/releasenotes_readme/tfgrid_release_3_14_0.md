@@ -22,15 +22,15 @@ sidebar_position: 364
 
 ## TFChain/GraphQL
 - Runtime upgrades
-- Support of HDD only nodes. [#967](https://github.com/threefoldtech/tfchain/issues/967)
+- Support of HDD only nodes. [#967](https://github.com/threefoldtech/ledger_chain/issues/967)
 - More validation for farms IPs
 - Improvements of indexing (tft price and farm policy)
 
 ## Grid Proxy
-- Sorting/querying by prices. [#608](https://github.com/threefoldtech/tfgrid-sdk-go/issues/608)
+- Sorting/querying by prices. [#608](https://github.com/threefoldtech/zos_sdk_go/issues/608)
 - Filters by number of gpus, region, ipv6 
-- Options for encoding and decoding for rmbpeer. [#507](https://github.com/threefoldtech/tfgrid-sdk-go/issues/507)
-- Add farm name/ rentable / rented information to the responses. [#612](https://github.com/threefoldtech/tfgrid-sdk-go/issues/612) [#639](https://github.com/threefoldtech/tfgrid-sdk-go/issues/639)
+- Options for encoding and decoding for rmbpeer. [#507](https://github.com/threefoldtech/zos_sdk_go/issues/507)
+- Add farm name/ rentable / rented information to the responses. [#612](https://github.com/threefoldtech/zos_sdk_go/issues/612) [#639](https://github.com/threefoldtech/zos_sdk_go/issues/639)
 - Filtering nodes by multiple statuses
 
 ## Farmerbot
