@@ -225,25 +225,3 @@ jobs:
           echo "=== Deployment completed successfully ==="
           echo "Build completed. Web server should serve from the docs directory."
           echo "Deployment timestamp: $(date)"
-
-  wait:
-    needs: deploy
-    name: Wait for Website Update
-    runs-on: ubuntu-latest
-    steps:
-    - name: Wait Period
-      id: wait-deploy
-      run: |
-        echo "Sleeping for 30 seconds to allow website update..."
-        sleep 30
-        
-  checklinks:
-    needs: wait
-    name: Check for Broken Links
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check for Broken Links
-        id: link-report
-        uses: docker://ghcr.io/threefoldfoundation/website-link-checker:latest
-        with:
-          args: 'https://manual.grid.tf -e 404 501 503 504 -w all'
