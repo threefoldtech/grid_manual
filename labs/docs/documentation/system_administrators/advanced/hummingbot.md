@@ -71,6 +71,6 @@ You should now see the Hummingbot page.
 
 ## References
 
-The information to install Hummingbot have been taken directly from their [documentation](https://hummingbot.org/installation/docker/).
+The information to install Hummingbot have been taken directly from their [documentation](https://hummingbot.org/installation/).
 
 For any advanced configurations, you may refer to the Hummingbot documentation.

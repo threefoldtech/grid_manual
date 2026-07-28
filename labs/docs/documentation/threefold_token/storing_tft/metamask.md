@@ -39,7 +39,7 @@ We present the steps on BSC. Make sure to switch to Ethereum and to use the TFT 
 
 ### Install & Create Metamask Account
 
-Go to the [Metamask website](https://metamask.io/) to download and install the Metamask extension for your browser. Follow [this tutorial](https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask) to install metamask to your preferred browser and create. 
+Go to the [Metamask website](https://metamask.io/) to download and install the Metamask extension for your browser. Follow [this tutorial](https://support.metamask.io/start/getting-started-with-metamask/) to install metamask to your preferred browser and create. 
 
 Once you’ve installed MetaMask, you’ll see the small fox icon at the top right of your screen, and a notification will appear, letting you know that the install was successful.
 
